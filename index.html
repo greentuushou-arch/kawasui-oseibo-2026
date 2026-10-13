@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>うなぎ屋かわすい お歳暮特集2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;700&family=EB+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sumi:#14100d;      /* 漆黒 */
+  --urushi:#1d1713;    /* 漆の中間色 */
+  --line-d:rgba(201,169,110,.28);
+  --kin:#b8955a;       /* 金 */
+  --kin-l:#d8bf8c;
+  --kinari:#f3eee4;    /* 生成り */
+  --kinari-d:#e7dfd0;
+  --ink:#231c17;
+  --ink-2:#5e544b;
+  --shu:#9e2b22;       /* 朱：要所のみ */
+  --mincho:"Shippori Mincho B1",serif;
+  --sans:"Noto Sans JP",sans-serif;
+  --num:"EB Garamond",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--kinari);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.9;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+.inner{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+.num{font-family:var(--num);font-feature-settings:"lnum"}
+.sp{display:inline}.pc{display:none!important}
+
+/* ---------- 共通見出し ---------- */
+.head{margin-bottom:44px}
+.head .en{font-family:var(--num);font-style:italic;font-size:17px;letter-spacing:.12em;color:var(--kin);display:flex;align-items:center;gap:14px}
+.head .en::after{content:"";flex:0 0 48px;height:1px;background:currentColor}
+.head h2{font-family:var(--mincho);font-weight:700;font-size:28px;line-height:1.45;letter-spacing:.06em;margin-top:14px}
+.head .lead{margin-top:16px;font-size:15px;color:var(--ink-2)}
+.dark .head h2{color:var(--kinari)}
+.dark .head .lead{color:rgba(243,238,228,.7)}
+
+/* ---------- ボタン ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:58px;padding:0 34px;font-family:var(--mincho);font-weight:700;font-size:16px;letter-spacing:.12em;border:1px solid var(--kin);color:var(--ink);background:transparent;transition:background .3s,color .3s}
+.btn::after{content:"";width:22px;height:1px;background:currentColor;transition:width .3s}
+.btn:hover::after{width:34px}
+.btn.fill{background:var(--ink);border-color:var(--ink);color:var(--kinari)}
+.btn.fill:hover{background:var(--shu);border-color:var(--shu)}
+.btn.gold{background:var(--kin);border-color:var(--kin);color:var(--sumi)}
+.btn.gold:hover{background:var(--kin-l)}
+
+/* ================= FV ================= */
+.fv{position:relative;background:var(--sumi);color:var(--kinari);overflow:hidden;padding:26px 0 0}
+.fv::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 70% 58%,rgba(158,43,34,.32),transparent 70%);pointer-events:none}
+.fv-top{position:relative;display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:.22em;color:rgba(243,238,228,.62);padding-bottom:18px;border-bottom:1px solid var(--line-d)}
+.fv-top b{font-family:var(--mincho);font-weight:700;font-size:14px;color:var(--kinari);letter-spacing:.24em}
+.fv-body{position:relative;display:grid;grid-template-columns:auto 1fr;gap:0 18px;padding-top:36px}
+.fv-title{grid-row:1 / span 2;writing-mode:vertical-rl;font-family:var(--mincho);font-weight:800;font-size:76px;line-height:1;letter-spacing:.14em;color:var(--kinari)}
+.fv-title small{display:block;font-family:var(--num);font-style:italic;font-weight:500;font-size:17px;letter-spacing:.2em;color:var(--kin);margin-right:14px;writing-mode:vertical-rl}
+.fv-copy{font-family:var(--mincho);font-weight:500;font-size:21px;line-height:1.85;letter-spacing:.08em;padding-top:8px}
+.fv-copy em{font-style:normal;color:var(--kin-l)}
+.fv-sub{font-size:13px;line-height:2;color:rgba(243,238,228,.66);margin-top:18px;letter-spacing:.06em}
+.fv-visual{position:relative;margin:26px -20px 0 -10px}
+.fv-visual img{width:112%;max-width:none;margin-left:-4%}
+.fv-mizuhiki{position:relative;display:block;width:100%;height:44px;margin-top:-22px}
+.fv-coupon{position:relative;display:grid;grid-template-columns:auto 1fr;align-items:center;gap:20px;border-top:1px solid var(--line-d);padding:26px 0 30px}
+.fv-coupon .off{font-family:var(--num);font-weight:600;font-size:58px;line-height:.9;color:var(--kin-l)}
+.fv-coupon .off small{font-size:22px;margin-left:4px;letter-spacing:.06em}
+.fv-coupon .t{font-family:var(--mincho);font-size:15px;white-space:nowrap;line-height:1.7;letter-spacing:.08em}
+.fv-coupon .t b{display:block;font-family:var(--sans);font-weight:500;font-size:13px;color:rgba(243,238,228,.66);letter-spacing:.06em;margin-top:4px}
+.fv-coupon .t b .num{font-size:19px;color:var(--kinari)}
+
+/* ================= ナビ ================= */
+.nav{background:var(--urushi);border-top:1px solid var(--line-d);position:sticky;top:0;z-index:20}
+.nav ul{display:grid;grid-template-columns:repeat(5,1fr);max-width:1080px;margin:0 auto}
+.nav a{display:block;text-align:center;padding:15px 2px;font-family:var(--mincho);font-weight:700;font-size:13px;letter-spacing:.06em;color:var(--kinari);border-left:1px solid var(--line-d);transition:color .3s}
+.nav li:first-child a{border-left:0}
+.nav a:hover{color:var(--kin-l)}
+
+/* ================= セクション共通 ================= */
+.sec{padding:96px 0}
+.sec.dark{background:var(--sumi);color:var(--kinari)}
+.sec.paper{background:var(--kinari-d)}
+
+/* ================= 早割（熨斗紙） ================= */
+.noshi{position:relative;background:#fbf8f2;border:1px solid #ddd2bf;padding:56px 26px 44px;overflow:hidden}
+.noshi::before{content:"";position:absolute;inset:10px;border:1px solid #e7dccb;pointer-events:none}
+.noshi-mark{position:absolute;top:0;right:22px;width:34px;height:auto}
+.noshi-label{font-family:var(--mincho);font-weight:700;font-size:15px;letter-spacing:.3em;color:var(--shu)}
+.noshi-off{font-family:var(--num);font-weight:600;font-size:116px;line-height:1;letter-spacing:-.01em;margin-top:10px}
+.noshi-off small{font-size:34px;margin-left:8px;letter-spacing:.08em}
+.noshi-term{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 14px;margin-top:22px;padding-top:22px;border-top:1px solid #e1d6c3}
+.noshi-term .d{font-family:var(--num);font-weight:600;font-size:34px;line-height:1}
+.noshi-term .d small{font-family:var(--sans);font-size:13px;font-weight:500;margin-left:4px;color:var(--ink-2)}
+.noshi-term .to{font-family:var(--mincho);font-size:13px;color:var(--ink-2)}
+.noshi-term .d:last-child{flex-basis:100%}
+.noshi-note{margin-top:20px;font-size:13px;color:var(--ink-2)}
+.noshi .btn{margin-top:30px;width:100%}
+
+/* ================= ポイントカレンダー ================= */
+.cal{border-top:1px solid var(--ink)}
+.cal li{display:grid;grid-template-columns:1fr;gap:4px;padding:22px 0;border-bottom:1px solid #d6cbb8}
+.cal .date{display:flex;align-items:baseline;gap:12px}
+.cal .date .num{font-weight:600;font-size:28px;line-height:1.2;letter-spacing:.02em}
+.cal .date small{font-size:12px;color:var(--ink-2);letter-spacing:.08em}
+.cal .what{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 16px}
+.cal .what b{font-family:var(--mincho);font-weight:700;font-size:20px;letter-spacing:.06em}
+.cal .what span{font-size:13px;color:var(--ink-2)}
+.cal .hot .what b{color:var(--shu)}
+.cal .kind{font-style:normal;font-size:11px;font-weight:700;letter-spacing:.16em;color:var(--shu);border-bottom:1px solid var(--shu);padding-bottom:1px}
+.cal-note{margin-top:18px;font-size:13px;color:var(--ink-2)}
+
+/* ================= ランキング ================= */
+.rank{display:grid;grid-template-columns:1fr;gap:0;padding:56px 0;border-top:1px solid var(--line-d)}
+.rank:first-of-type{border-top:0;padding-top:8px}
+.rank .ph{display:block}
+.rank .ph img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.rank .no{display:flex;align-items:baseline;gap:6px;font-family:var(--num);font-weight:500;font-size:84px;line-height:.9;color:var(--kin);margin-bottom:14px}
+.rank .no::after{content:"";flex:1;height:1px;background:var(--line-d);margin-left:12px;align-self:center}
+.rank .no small{font-size:22px;font-style:italic;margin-right:4px;letter-spacing:.08em}
+.rank .tx{padding-top:30px}
+.rank h3{font-family:var(--mincho);font-weight:700;font-size:25px;line-height:1.5;letter-spacing:.06em}
+.rank p.c{margin-top:16px;font-size:15px;color:rgba(243,238,228,.76)}
+.rank .meta{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:20px;font-size:12px;letter-spacing:.08em;color:rgba(243,238,228,.62)}
+.rank .meta .star{color:var(--kin-l)}
+.rank .price{margin-top:14px;font-family:var(--num);font-weight:600;font-size:34px;line-height:1.2}
+.rank .price small{font-family:var(--sans);font-size:13px;font-weight:400;margin-left:4px;color:rgba(243,238,228,.62)}
+.rank .btn{margin-top:26px;color:var(--kinari);width:100%}
+.rank .btn:hover{background:var(--kin);color:var(--sumi)}
+
+/* ================= 予算で選ぶ ================= */
+.tier{padding-top:56px}
+.tier:first-of-type{padding-top:0}
+.tier-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding-bottom:16px;border-bottom:1px solid var(--ink);margin-bottom:28px}
+.tier-head .yen{font-family:var(--mincho);font-weight:800;font-size:22px;line-height:1.2;letter-spacing:.04em}
+.tier-head .yen{white-space:nowrap}
+.tier-head .yen .num{font-weight:600;font-size:32px;letter-spacing:0}
+.tier-head .d{font-family:var(--mincho);font-size:14px;letter-spacing:.14em;color:var(--ink-2);white-space:nowrap}
+.tier.premium .tier-head{border-bottom-color:var(--kin)}
+.tier.premium .tier-head .d{color:var(--shu)}
+.items{display:grid;grid-template-columns:1fr 1fr;gap:36px 16px}
+.item{display:block}
+.item .ph{overflow:hidden;background:#fff}
+.item img{width:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .8s ease}
+.item:hover img{transform:scale(1.04)}
+.item h4{font-family:var(--mincho);font-weight:700;font-size:15px;line-height:1.6;letter-spacing:.04em;margin-top:14px}
+.item .price{font-family:var(--num);font-weight:600;font-size:25px;line-height:1.3;margin-top:4px}
+.item .price small{font-family:var(--sans);font-size:12px;font-weight:400;margin-left:2px}
+.item .tg{font-size:11px;letter-spacing:.06em;color:var(--ink-2);margin-top:4px}
+.item .tg .ng{color:var(--shu)}
+
+/* ================= 常温 ================= */
+.room{display:grid;grid-template-columns:1fr;background:#fbf8f2;border:1px solid #ddd2bf}
+.room img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.room .tx{padding:30px 24px 34px}
+.room .tag{font-family:var(--mincho);font-weight:700;font-size:13px;letter-spacing:.24em;color:var(--shu)}
+.room h3{font-family:var(--mincho);font-weight:700;font-size:23px;line-height:1.55;letter-spacing:.05em;margin-top:10px}
+.room .price{font-family:var(--num);font-weight:600;font-size:32px;margin-top:12px;line-height:1.2}
+.room .price small{font-family:var(--sans);font-size:13px;font-weight:400;margin-left:4px;color:var(--ink-2)}
+.room ul{margin-top:20px;border-top:1px solid #e1d6c3}
+.room li{padding:12px 0 12px 26px;border-bottom:1px solid #e1d6c3;font-size:15px;position:relative}
+.room li::before{content:"";position:absolute;left:4px;top:50%;width:10px;height:1px;background:var(--kin)}
+.room .btn{margin-top:26px;width:100%}
+
+.winter{margin-top:88px}
+.winter-head{font-family:var(--mincho);font-weight:700;font-size:24px;letter-spacing:.08em;line-height:1.5;margin-bottom:28px}
+.winter-head small{display:block;font-family:var(--num);font-style:italic;font-weight:500;font-size:16px;color:var(--kin);letter-spacing:.12em}
+
+/* ================= ギフト対応 ================= */
+.svc{display:grid;grid-template-columns:1fr;border-top:1px solid var(--line-d)}
+.svc li{display:grid;grid-template-columns:52px 1fr;gap:4px 18px;padding:28px 0;border-bottom:1px solid var(--line-d)}
+.svc .n{grid-row:1 / span 2;font-family:var(--num);font-size:38px;line-height:1;color:var(--kin)}
+.svc h3{font-family:var(--mincho);font-weight:700;font-size:21px;letter-spacing:.08em;line-height:1.4}
+.svc p{font-size:14px;color:rgba(243,238,228,.74)}
+.svc p a{display:inline-block;margin-top:8px;color:var(--kin-l);border-bottom:1px solid var(--kin);letter-spacing:.06em}
+
+.sched{margin-top:96px}
+.sched h3{font-family:var(--mincho);font-weight:700;font-size:26px;letter-spacing:.1em;margin-bottom:34px}
+.steps{position:relative;padding-left:30px}
+.steps::before{content:"";position:absolute;left:6px;top:10px;bottom:10px;width:1px;background:var(--line-d)}
+.steps li{position:relative;padding-bottom:32px}
+.steps li:last-child{padding-bottom:0}
+.steps li::before{content:"";position:absolute;left:-29px;top:9px;width:11px;height:11px;border:1px solid var(--kin);background:var(--sumi);border-radius:50%}
+.steps li.hot::before{background:var(--shu);border-color:var(--shu)}
+.steps li.end::before{background:var(--kin)}
+.steps .when{display:block;font-family:var(--mincho);font-weight:700;font-size:19px;letter-spacing:.06em;color:var(--kin-l)}
+.steps li.hot .when{color:#e2766a}
+.steps .what{display:block;font-size:14px;color:rgba(243,238,228,.78);margin-top:4px}
+.steps .what b{font-size:21px;color:var(--kinari)}
+
+/* ================= 締め ================= */
+.outro{position:relative;background:var(--sumi);color:var(--kinari);padding:120px 0 110px;overflow:hidden;border-top:1px solid var(--line-d)}
+.outro .inner{position:relative}
+.outro h2{font-family:var(--mincho);font-weight:800;font-size:38px;line-height:1.55;letter-spacing:.1em}
+.outro p{margin-top:28px;font-family:var(--mincho);font-size:16px;line-height:2.1;letter-spacing:.08em;color:rgba(243,238,228,.78)}
+.outro .btn{margin-top:46px;color:var(--kinari)}
+.outro .btn:hover{background:var(--kin);color:var(--sumi)}
+.foot{background:var(--sumi);color:rgba(243,238,228,.45);font-size:11px;letter-spacing:.2em;text-align:center;padding:22px 0 26px;border-top:1px solid var(--line-d)}
+
+/* ---------- 出現 ---------- */
+.rv{opacity:0;transform:translateY(18px);transition:opacity 1s ease,transform 1s ease}
+.rv.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+/* ================= PC ================= */
+@media (min-width:768px){
+  .sp{display:none}.pc{display:inline-flex!important}
+  .inner{padding:0 48px}
+  .head{margin-bottom:64px}
+  .head h2{font-size:46px}
+  .head .lead{font-size:16px}
+  .sec{padding:140px 0}
+
+  .fv{padding-top:30px}
+  .fv-top{font-size:13px}
+  .fv-body{grid-template-columns:auto 440px 1fr;grid-template-rows:auto;gap:0 44px;padding-top:70px;align-items:start}
+  .fv-title{grid-row:auto;font-size:132px}
+  .fv-title small{font-size:22px;margin-right:22px}
+  .fv-copy{font-size:30px;padding-top:24px;white-space:nowrap}
+  .fv-sub{font-size:15px;margin-top:28px}
+  .fv-visual{margin:10px -60px 0 -60px}
+  .fv-visual img{width:150%;margin-left:-22%}
+  .fv-mizuhiki{height:64px;margin-top:-40px}
+  .fv-coupon{grid-template-columns:auto auto 1fr;gap:36px;padding:34px 0 40px}
+  .fv-coupon .off{font-size:92px}
+  .fv-coupon .off small{font-size:30px}
+  .fv-coupon .t{font-size:18px}
+  .fv-coupon .t b{font-size:14px}
+  .fv-coupon .t b .num{font-size:24px}
+  .fv-coupon .btn{justify-self:end}
+
+  .nav a{font-size:15px;padding:18px 4px;letter-spacing:.14em}
+
+  .noshi{display:grid;grid-template-columns:1fr auto;gap:0 60px;align-items:end;padding:80px 72px 64px}
+  .noshi-mark{right:56px;width:46px}
+  .noshi-label{font-size:17px}
+  .noshi-off{font-size:200px;margin-top:6px}
+  .noshi-off small{font-size:56px}
+  .noshi-term{grid-column:1 / -1;margin-top:28px;padding-top:28px}
+  .noshi-term .d{font-size:46px}
+  .noshi-term .d:last-child{flex-basis:auto}
+  .noshi-note{grid-column:1;font-size:14px}
+  .noshi .btn{grid-column:2;grid-row:3;width:auto;margin-top:20px}
+
+  .cal-wrap{display:grid;grid-template-columns:300px 1fr;gap:64px;align-items:start}
+  .cal-wrap .head h2{font-size:38px}
+  .cal-wrap .head{position:sticky;top:110px}
+  .cal li{grid-template-columns:250px 1fr;align-items:center;padding:24px 0}
+  .cal .date{flex-direction:column;gap:0}
+  .cal .date .num{white-space:nowrap}
+  .cal .date .num{font-size:32px}
+  .cal .what b{font-size:22px}
+
+  .rank{grid-template-columns:1fr 1fr;gap:70px;align-items:center;padding:90px 0}
+  .rank:nth-of-type(even) .ph{order:2}
+  .rank .no{font-size:130px;margin-bottom:20px}
+  .rank .no small{font-size:30px}
+  .rank .tx{padding-top:0}
+  .rank h3{font-size:34px}
+  .rank p.c{font-size:16px;margin-top:22px}
+  .rank .price{font-size:44px}
+  .rank .btn{width:auto}
+
+  .tier{padding-top:96px}
+  .tier-head{margin-bottom:40px}
+  .tier-head .yen{font-size:36px}
+  .tier-head .yen .num{font-size:52px}
+  .tier-head .d{font-size:16px}
+  .items{grid-template-columns:repeat(4,1fr);gap:28px}
+  .item h4{font-size:16px}
+  .item .price{font-size:28px}
+
+  .room{grid-template-columns:1.1fr 1fr}
+  .room img{height:100%;aspect-ratio:auto}
+  .room .tx{padding:56px 56px 56px}
+  .room h3{font-size:28px}
+  .room .price{font-size:40px}
+  .room .btn{width:auto}
+  .winter{margin-top:130px;display:grid;grid-template-columns:300px 1fr;gap:60px;align-items:start}
+  .winter-head{font-size:30px}
+  .winter .items{grid-template-columns:1fr 1fr;gap:32px}
+
+  .svc-wrap{display:grid;grid-template-columns:1fr 1fr;gap:90px}
+  .svc li{grid-template-columns:64px 1fr;padding:32px 0}
+  .svc .n{font-size:46px}
+  .svc h3{font-size:23px}
+  .svc p{font-size:15px}
+  .sched{margin-top:0}
+  .sched h3{font-size:30px}
+  .steps .when{font-size:21px}
+  .steps .what{font-size:15px}
+
+  .outro{padding:180px 0 170px}
+  .outro .inner{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
+  .outro h2{font-size:60px}
+  .outro p{font-size:18px}
+  .outro .btn{margin-top:0}
+}
+@media (min-width:1100px){
+  .fv-title{font-size:150px}
+  .fv-copy{font-size:32px}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= FV ================= -->
+<header class="fv">
+  <div class="inner">
+    <div class="fv-top"><b>うなぎ屋かわすい</b><span class="num">WINTER GIFT 2026</span></div>
+    <div class="fv-body">
+      <h1 class="fv-title">御歳暮<small>Oseibo 2026</small></h1>
+      <div>
+        <p class="fv-copy rv">一年分の<br class="sp">ありがとうを、<br><em>炭火の香り</em>に<br class="sp">のせて。</p>
+        <p class="fv-sub rv">国産うなぎ蒲焼きの贈りもの。<br>送料無料・のし無料で、<br>大切な方のもとへお届けします。</p>
+      </div>
+      <div class="fv-visual">
+        <img src="https://www.rakuten.ne.jp/gold/kawasui/page/os/images/fv-don.png" width="692" height="514" alt="国産うなぎ蒲焼きの特大うな丼">
+      </div>
+    </div>
+  </div>
+  <!-- 水引：金・銀・朱の三本線 -->
+  <svg class="fv-mizuhiki" viewBox="0 0 1200 64" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 34 C 300 10, 520 58, 760 30 S 1080 18, 1200 32" fill="none" stroke="#b8955a" stroke-width="1.4"/>
+    <path d="M0 40 C 300 16, 520 64, 760 36 S 1080 24, 1200 38" fill="none" stroke="#d8bf8c" stroke-width="1"/>
+    <path d="M0 46 C 300 22, 520 70, 760 42 S 1080 30, 1200 44" fill="none" stroke="#9e2b22" stroke-width="1.4"/>
+  </svg>
+  <div class="inner">
+    <a class="fv-coupon" href="#campaign">
+      <span class="off num">10%<small>OFF</small></span>
+      <span class="t">お歳暮 早割クーポン<b><span class="num">12/10</span>(木) 9:59まで</b></span>
+      <span class="btn gold pc">詳しく見る</span>
+    </a>
+  </div>
+</header>
+
+<!-- ================= ナビ ================= -->
+<nav class="nav">
+  <ul>
+    <li><a href="#campaign">早割</a></li>
+    <li><a href="#ranking">人気</a></li>
+    <li><a href="#budget">ご予算</a></li>
+    <li><a href="#room">常温</a></li>
+    <li><a href="#service">ギフト</a></li>
+  </ul>
+</nav>
+
+<!-- ================= 早割クーポン ================= -->
+<section class="sec" id="campaign">
+  <div class="inner">
+    <div class="head rv">
+      <p class="en">Early Bird Coupon</p>
+      <h2>早めのご用意が、<br>いちばんの心づかい。</h2>
+    </div>
+    <div class="noshi rv">
+      <!-- 熨斗 -->
+      <svg class="noshi-mark" viewBox="0 0 46 96" aria-hidden="true">
+        <path d="M8 0 L38 0 L38 70 L23 96 L8 70 Z" fill="#9e2b22"/>
+        <path d="M14 0 L32 0 L32 62 L23 80 L14 62 Z" fill="#fbf8f2"/>
+        <rect x="20" y="6" width="6" height="58" fill="#d8bf8c"/>
+      </svg>
+      <div>
+        <p class="noshi-label">お歳暮 早割クーポン</p>
+        <p class="noshi-off num">10%<small>OFF</small></p>
+      </div>
+      <p class="noshi-term">
+        <span class="d num">10/28<small>(水) 10:00</small></span>
+        <span class="to">から</span>
+        <span class="d num">12/10<small>(木) 9:59</small></span>
+      </p>
+      <p class="noshi-note">【※対象商品・利用条件・先着枚数などをここに記載】</p>
+      <!-- ★要記入：クーポン取得URL -->
+      <a class="btn fill" href="#">クーポンを受け取る</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ポイントアップカレンダー ================= -->
+<!-- 期間は入稿済みの広告枠に合わせています。開始・終了時刻と対象商品は要記入 -->
+<section class="sec paper" id="calendar">
+  <div class="inner cal-wrap">
+    <div class="head rv">
+      <p class="en">Point Calendar</p>
+      <h2>ポイントアップ<br>カレンダー</h2>
+      <p class="lead">早割クーポンと併せて、<br>さらにおトクにご用意いただけます。</p>
+    </div>
+    <div>
+      <ul class="cal">
+        <li class="hot"><div class="date"><span class="num">11/1 – 11/3</span><small>日〜火・祝</small></div><div class="what"><i class="kind">週末企画</i><b>ポイント15倍</b><span>対象：【商品名】</span></div></li>
+        <li><div class="date"><span class="num">11/1 – 11/15</span><small>日〜日</small></div><div class="what"><b>ポイント最大10倍</b><span>対象：【商品名】</span></div></li>
+        <li><div class="date"><span class="num">11/16 – 11/23</span><small>月〜月・祝</small></div><div class="what"><b>ポイント最大10倍</b><span>対象：【商品名】</span></div></li>
+        <li class="hot"><div class="date"><span class="num">11/20 – 11/23</span><small>金〜月・祝</small></div><div class="what"><i class="kind">週末企画</i><b>ポイント15倍</b><span>対象：【商品名】</span></div></li>
+        <li><div class="date"><span class="num">11/30 – 12/6</span><small>月〜日</small></div><div class="what"><b>ポイント最大10倍</b><span>対象：【商品名】</span></div></li>
+        <li class="hot"><div class="date"><span class="num">12/11 – 12/13</span><small>金〜日</small></div><div class="what"><i class="kind">週末企画</i><b>ポイント15倍</b><span>対象：【商品名】</span></div></li>
+        <li><div class="date"><span class="num">12/14 – 12/28</span><small>月〜月</small></div><div class="what"><b>ポイント最大10倍</b><span>対象：【商品名】</span></div></li>
+      </ul>
+      <p class="cal-note">※各期間の開始・終了時刻：【要記入】</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ランキング ================= -->
+<section class="sec dark" id="ranking">
+  <div class="inner">
+    <div class="head rv">
+      <p class="en">Ranking</p>
+      <h2>昨年、もっとも<br class="sp">選ばれた三品。</h2>
+      <p class="lead">迷われたら、まずはこちらから。</p>
+    </div>
+
+    <article class="rank rv">
+      <a class="ph" href="https://item.rakuten.co.jp/kawasui/10000130/"><img src="https://shop.r10s.jp/kawasui/cabinet/check/ota-dai80_601.jpg" alt="国産うなぎ蒲焼き3種セット" loading="lazy"></a>
+      <div class="tx">
+        <span class="no"><small>No.</small>1</span><h3>国産うなぎ蒲焼き<br>3種セット</h3>
+        <p class="c">長焼き・カット・きざみを食べ比べ。ご家族みんなで囲める、いちばん人気のお歳暮です。</p>
+        <p class="meta"><span class="star">評価 4.62</span><span>送料無料</span><span>冷凍便</span><span>のし対応</span></p>
+        <p class="price num">5,990 – 7,715<small>円（税込）</small></p>
+        <a class="btn" href="https://item.rakuten.co.jp/kawasui/10000130/">商品を見る</a>
+      </div>
+    </article>
+
+    <article class="rank rv">
+      <a class="ph" href="https://item.rakuten.co.jp/kawasui/10001981/"><img src="https://shop.r10s.jp/kawasui/cabinet/check/cut4200km2_601.jpg" alt="カットと肝吸いギフト" loading="lazy"></a>
+      <div class="tx">
+        <span class="no"><small>No.</small>2</span><h3>カットと肝吸いギフト</h3>
+        <p class="c">食べやすい大きさにカットした蒲焼きを、1枚ずつ真空パック。本格肝吸いも付いた2人前セットです。</p>
+        <p class="meta"><span class="star">評価 4.74</span><span>送料無料</span><span>冷凍便</span><span>のし対応</span></p>
+        <p class="price num">5,990 – 6,095<small>円（税込）</small></p>
+        <a class="btn" href="https://item.rakuten.co.jp/kawasui/10001981/">商品を見る</a>
+      </div>
+    </article>
+
+    <article class="rank rv">
+      <a class="ph" href="https://item.rakuten.co.jp/kawasui/10002324/"><img src="https://shop.r10s.jp/kawasui/cabinet/check/ota2_601.jpg" alt="中身が選べる国産うなぎ2種セット" loading="lazy"></a>
+      <div class="tx">
+        <span class="no"><small>No.</small>3</span><h3>中身が選べる<br>国産うなぎ2種セット</h3>
+        <p class="c">組み合わせを選べるから、贈るお相手に合わせやすい。5,000円以内で収めたい方にも。</p>
+        <p class="meta"><span class="star">評価 4.73</span><span>送料無料</span><span>冷凍便</span><span>のし対応</span></p>
+        <p class="price num">4,600 – 5,030<small>円（税込）</small></p>
+        <a class="btn" href="https://item.rakuten.co.jp/kawasui/10002324/">商品を見る</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= 予算で選ぶ ================= -->
+<section class="sec" id="budget">
+  <div class="inner">
+    <div class="head rv">
+      <p class="en">By Budget</p>
+      <h2>ご予算で選ぶ</h2>
+      <p class="lead">贈るお相手との距離感にあわせて。</p>
+    </div>
+
+    <div class="tier rv">
+      <h3 class="tier-head"><span class="yen"><span class="num">5,000</span>円未満</span><span class="d">気軽に贈れる</span></h3>
+      <div class="items">
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002290/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-k1002ks2_601.jpg" alt="きざみと肝吸いギフト" loading="lazy"></div><h4>きざみと肝吸いギフト</h4><p class="price num">3,990<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002289/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-kb1701ks1sn_601.jpg" alt="長焼きと肝吸いギフト" loading="lazy"></div><h4>長焼きと肝吸いギフト</h4><p class="price num">4,180<small>円〜</small></p><p class="tg">送料無料・冷凍便</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002324/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/check/ota2_601.jpg" alt="中身が選べる国産うなぎ2種セット" loading="lazy"></div><h4>中身が選べる2種セット</h4><p class="price num">4,600<small>円〜</small></p><p class="tg">送料無料・冷凍便</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002526/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/imgrc0109082864.jpg" alt="うなぎのおつまみセット" loading="lazy"></div><h4>うなぎのおつまみセット</h4><p class="price num">4,800<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
+      </div>
+    </div>
+
+    <div class="tier rv">
+      <h3 class="tier-head"><span class="yen"><span class="num">5,000 – 6,000</span>円台</span><span class="d">しっかり贅沢に</span></h3>
+      <div class="items">
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002524/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/check/s-kb2300sn_601.jpg" alt="国産うなぎ2尾入300g" loading="lazy"></div><h4>国産うなぎ2尾入 300g</h4><p class="price num">5,560<small>円〜</small></p><p class="tg">送料無料・冷凍便</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10000130/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/check/ota-dai80_601.jpg" alt="国産うなぎ蒲焼き3種セット" loading="lazy"></div><h4>国産うなぎ蒲焼き3種セット</h4><p class="price num">5,990<small>円〜</small></p><p class="tg">送料無料・冷凍便</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10001981/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/check/cut4200km2_601.jpg" alt="カットと肝吸いギフト" loading="lazy"></div><h4>カットと肝吸いギフト</h4><p class="price num">5,990<small>円〜</small></p><p class="tg">送料無料・冷凍便</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10001980/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/kb200ki2_601.jpg" alt="超特大うなぎときざみセット" loading="lazy"></div><h4>超特大うなぎときざみセット</h4><p class="price num">6,480<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
+      </div>
+    </div>
+
+    <div class="tier premium rv">
+      <h3 class="tier-head"><span class="yen"><span class="num">7,000</span>円以上</span><span class="d">特別なあの方へ</span></h3>
+      <div class="items">
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10000113/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-kb1702sn_601.jpg" alt="特大うなぎ蒲焼き170g×2本" loading="lazy"></div><h4>特大うなぎ蒲焼き<br>170g×2本</h4><p class="price num">8,210<small>円〜</small></p><p class="tg">送料無料・冷凍便</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10000114/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-kb1703sn_601.jpg" alt="特大うなぎ蒲焼き170g×3本" loading="lazy"></div><h4>特大うなぎ蒲焼き<br>170g×3本</h4><p class="price num">10,910<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002456/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-kb1704sn_601.jpg" alt="特大うなぎ蒲焼き170g×4本" loading="lazy"></div><h4>特大うなぎ蒲焼き<br>170g×4本</h4><p class="price num">14,020<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10000104/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-kb1705sn_601.jpg" alt="特大うなぎ蒲焼き170g×5本" loading="lazy"></div><h4>特大うなぎ蒲焼き<br>170g×5本</h4><p class="price num">16,920<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 常温ギフト＋冬のごちそう ================= -->
+<section class="sec paper" id="room">
+  <div class="inner">
+    <div class="head rv">
+      <p class="en">No Freezer Needed</p>
+      <h2>冷凍庫を気にせず<br>贈れる、常温ギフト。</h2>
+      <p class="lead">受け取る方が困らない、ひとつ上の気づかいを。</p>
+    </div>
+    <a class="room rv" href="https://item.rakuten.co.jp/kawasui/10002534/">
+      <img src="https://shop.r10s.jp/kawasui/cabinet/ncimag00/cut2100snj-3_601.jpg" alt="常温タイプ 蒲焼きカット3人前ギフト" loading="lazy">
+      <div class="tx">
+        <p class="tag">常温タイプ</p>
+        <h3>国産うなぎの蒲焼き<br>カット3人前ギフト</h3>
+        <p class="price num">5,990 – 6,320<small>円（税込）</small></p>
+        <ul>
+          <li>冷凍庫の空きを気にせず贈れる</li>
+          <li>レンジで温めるだけ</li>
+          <li>手渡しの手土産にも</li>
+        </ul>
+        <span class="btn fill">商品を見る</span>
+      </div>
+    </a>
+
+    <div class="winter rv">
+      <h3 class="winter-head"><small>Winter Delicacies</small>冬は、こちらも<br>喜ばれます。</h3>
+      <div class="items">
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002492/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/r-set/ms-nzo_601.jpg" alt="3種類から選べる生ズワイガニ" loading="lazy"></div><h4>生ズワイガニ<br>3種から選べる</h4><p class="price num">8,000<small>円</small></p><p class="tg">送料無料・冷凍便・のし対応</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002403/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/ncimag00/ms-kshm-500_601.jpg" alt="紀州串本産 本マグロ 赤身・トロ500g" loading="lazy"></div><h4>紀州串本産 本マグロ<br>赤身・トロ 500g</h4><p class="price num">8,980<small>円</small></p><p class="tg">送料無料・冷凍便・<span class="ng">のし・包装不可</span></p></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ギフトサービス ================= -->
+<section class="sec dark" id="service">
+  <div class="inner svc-wrap">
+    <div>
+      <div class="head rv">
+        <p class="en">Gift Service</p>
+        <h2>贈りものの<br>お手伝いも、<br>おまかせを。</h2>
+      </div>
+      <ul class="svc rv">
+        <li><span class="n num">01</span><h3>のし 無料</h3><p>「御歳暮」の表書きとお名入れに対応いたします。</p></li>
+        <li><span class="n num">02</span><h3>ギフト包装 無料</h3><p>ご希望の方には紙袋（110円）もご用意しています。<br><a href="https://item.rakuten.co.jp/kawasui/10002399/">紙袋はこちら</a></p></li>
+        <li><span class="n num">03</span><h3>お届け日指定</h3><p>ご注文時に、ご希望のお届け日をお選びいただけます。</p></li>
+        <li><span class="n num">04</span><h3>ソーシャルギフト</h3><p>お名前やご住所を知らない方にも、気軽に贈れます。</p></li>
+      </ul>
+    </div>
+
+    <div class="sched rv">
+      <div class="head">
+        <p class="en">Schedule</p>
+      </div>
+      <h3>お歳暮のスケジュール</h3>
+      <ol class="steps">
+        <li class="hot"><span class="when">〜12/10 朝</span><span class="what">早割10%OFFでおトクにご注文を。<br>お届け日を指定しておけば安心です。</span></li>
+        <li><span class="when">12月上旬〜</span><span class="what">お歳暮を贈る一般的な時期のはじまり。</span></li>
+        <li><span class="when">12/20頃まで</span><span class="what">このあたりまでに届くのが目安です。</span></li>
+        <li class="end"><span class="when">年内配送</span><span class="what">年内お届けの最終受付は<br><b class="num">12/28</b>(月) 12:00 まで。</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 締め ================= -->
+<section class="outro">
+  <div class="inner">
+    <div class="rv">
+      <h2>あの方の食卓に、<br>年の瀬のごちそうを。</h2>
+      <p>今年お世話になった方へ。<br>かわすいのうなぎで、あたたかな年末を。</p>
+    </div>
+    <a class="btn rv" href="https://www.rakuten.co.jp/kawasui/">ショップを見る</a>
+  </div>
+</section>
+<div class="foot">うなぎ屋かわすい ｜ お歳暮特集 2026</div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('on')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
