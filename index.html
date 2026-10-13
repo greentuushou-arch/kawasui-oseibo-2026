@@ -9,8 +9,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;700&family=EB+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --sumi:#14100d;      /* 漆黒 */
-  --urushi:#1d1713;    /* 漆の中間色 */
+  --sumi:#55100d;      /* 臙脂（暗いセクション） */
+  --urushi:#470c0a;    /* ナビ */
+  --beni:#9c1c16;      /* 紅：FV・締め */
+  --beni-d:#741310;
   --line-d:rgba(201,169,110,.28);
   --kin:#b8955a;       /* 金 */
   --kin-l:#d8bf8c;
@@ -18,7 +20,7 @@
   --kinari-d:#e7dfd0;
   --ink:#231c17;
   --ink-2:#5e544b;
-  --shu:#9e2b22;       /* 朱：要所のみ */
+  --shu:#b0241c;       /* 朱 */
   --mincho:"Shippori Mincho B1",serif;
   --sans:"Noto Sans JP",sans-serif;
   --num:"EB Garamond",serif;
@@ -40,29 +42,33 @@ ul,ol{list-style:none}
 .head h2{font-family:var(--mincho);font-weight:700;font-size:28px;line-height:1.45;letter-spacing:.06em;margin-top:14px}
 .head .lead{margin-top:16px;font-size:15px;color:var(--ink-2)}
 .dark .head h2{color:var(--kinari)}
+.dark .head .en,.dark .svc .n,.dark .rank .no{color:var(--kin-l)}
 .dark .head .lead{color:rgba(243,238,228,.7)}
 
 /* ---------- ボタン ---------- */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:58px;padding:0 34px;font-family:var(--mincho);font-weight:700;font-size:16px;letter-spacing:.12em;border:1px solid var(--kin);color:var(--ink);background:transparent;transition:background .3s,color .3s}
 .btn::after{content:"";width:22px;height:1px;background:currentColor;transition:width .3s}
 .btn:hover::after{width:34px}
-.btn.fill{background:var(--ink);border-color:var(--ink);color:var(--kinari)}
-.btn.fill:hover{background:var(--shu);border-color:var(--shu)}
+.btn.fill{background:var(--shu);border-color:var(--shu);color:#fff}
+.btn.fill:hover{background:var(--beni-d);border-color:var(--beni-d)}
 .btn.gold{background:var(--kin);border-color:var(--kin);color:var(--sumi)}
 .btn.gold:hover{background:var(--kin-l)}
 
 /* ================= FV ================= */
-.fv{position:relative;background:var(--sumi);color:var(--kinari);overflow:hidden;padding:26px 0 0}
-.fv::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 70% 58%,rgba(158,43,34,.32),transparent 70%);pointer-events:none}
+.fv{position:relative;background:linear-gradient(180deg,var(--beni) 0%,var(--beni-d) 100%);color:var(--kinari);overflow:hidden;padding:26px 0 0}
+.fv::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 30% 20%,rgba(255,255,255,.07),transparent 70%);pointer-events:none}
 .fv-top{position:relative;display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:.22em;color:rgba(243,238,228,.62);padding-bottom:18px;border-bottom:1px solid var(--line-d)}
 .fv-top b{font-family:var(--mincho);font-weight:700;font-size:14px;color:var(--kinari);letter-spacing:.24em}
 .fv-body{position:relative;display:grid;grid-template-columns:auto 1fr;gap:0 18px;padding-top:36px}
 .fv-title{grid-row:1 / span 2;writing-mode:vertical-rl;font-family:var(--mincho);font-weight:800;font-size:76px;line-height:1;letter-spacing:.14em;color:var(--kinari)}
-.fv-title small{display:block;font-family:var(--num);font-style:italic;font-weight:500;font-size:17px;letter-spacing:.2em;color:var(--kin);margin-right:14px;writing-mode:vertical-rl}
+.fv-title small{display:block;font-family:var(--num);font-style:italic;font-weight:500;font-size:17px;letter-spacing:.2em;color:var(--kin-l);margin-right:14px;writing-mode:vertical-rl}
 .fv-copy{font-family:var(--mincho);font-weight:500;font-size:21px;line-height:1.85;letter-spacing:.08em;padding-top:8px}
 .fv-copy em{font-style:normal;color:var(--kin-l)}
 .fv-sub{font-size:13px;line-height:2;color:rgba(243,238,228,.66);margin-top:18px;letter-spacing:.06em}
 .fv-visual{position:relative;margin:26px -20px 0 -10px}
+/* 初日の出：金の円を器の背後に */
+.fv-visual::before{content:"";position:absolute;width:78%;aspect-ratio:1;right:2%;top:-14%;border-radius:50%;background:radial-gradient(circle at 50% 45%,#ecd49c 0%,#d2b06e 62%,#b8914f 100%)}
+.fv-visual img{position:relative}
 .fv-visual img{width:112%;max-width:none;margin-left:-4%}
 .fv-mizuhiki{position:relative;display:block;width:100%;height:44px;margin-top:-22px}
 .fv-coupon{position:relative;display:grid;grid-template-columns:auto 1fr;align-items:center;gap:20px;border-top:1px solid var(--line-d);padding:26px 0 30px}
@@ -186,13 +192,16 @@ ul,ol{list-style:none}
 .steps li.hot::before{background:var(--shu);border-color:var(--shu)}
 .steps li.end::before{background:var(--kin)}
 .steps .when{display:block;font-family:var(--mincho);font-weight:700;font-size:19px;letter-spacing:.06em;color:var(--kin-l)}
-.steps li.hot .when{color:#e2766a}
+.steps li.hot .when{color:#fff}
+.steps li.hot::before{background:#fff!important;border-color:#fff!important}
 .steps .what{display:block;font-size:14px;color:rgba(243,238,228,.78);margin-top:4px}
 .steps .what b{font-size:21px;color:var(--kinari)}
 
 /* ================= 締め ================= */
-.outro{position:relative;background:var(--sumi);color:var(--kinari);padding:120px 0 110px;overflow:hidden;border-top:1px solid var(--line-d)}
+.outro{position:relative;background:linear-gradient(180deg,var(--beni-d) 0%,var(--beni) 100%);color:var(--kinari);padding:120px 0 110px;overflow:hidden;border-top:1px solid var(--line-d)}
+.outro::before{content:"";position:absolute;width:420px;aspect-ratio:1;right:-140px;bottom:-210px;border-radius:50%;background:radial-gradient(circle at 50% 45%,#ecd49c 0%,#d2b06e 62%,#b8914f 100%);opacity:.9}
 .outro .inner{position:relative}
+.outro .ny{font-family:var(--num);font-style:italic;font-size:17px;letter-spacing:.14em;color:var(--kin-l);margin-bottom:22px}
 .outro h2{font-family:var(--mincho);font-weight:800;font-size:38px;line-height:1.55;letter-spacing:.1em}
 .outro p{margin-top:28px;font-family:var(--mincho);font-size:16px;line-height:2.1;letter-spacing:.08em;color:rgba(243,238,228,.78)}
 .outro .btn{margin-top:46px;color:var(--kinari)}
@@ -293,6 +302,7 @@ ul,ol{list-style:none}
   .steps .what{font-size:15px}
 
   .outro{padding:180px 0 170px}
+  .outro::before{width:620px;right:-120px;bottom:-330px}
   .outro .inner{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
   .outro h2{font-size:60px}
   .outro p{font-size:18px}
@@ -314,18 +324,18 @@ ul,ol{list-style:none}
       <h1 class="fv-title">御歳暮<small>Oseibo 2026</small></h1>
       <div>
         <p class="fv-copy rv">一年分の<br class="sp">ありがとうを、<br><em>炭火の香り</em>に<br class="sp">のせて。</p>
-        <p class="fv-sub rv">国産うなぎ蒲焼きの贈りもの。<br>送料無料・のし無料で、<br>大切な方のもとへお届けします。</p>
+        <p class="fv-sub rv">国産うなぎ蒲焼きの贈りもの。<br>新しい年を迎える食卓へ、<br>送料無料・のし無料で<br class="sp">お届けします。</p>
       </div>
       <div class="fv-visual">
         <img src="https://www.rakuten.ne.jp/gold/kawasui/page/os/images/fv-don.png" width="692" height="514" alt="国産うなぎ蒲焼きの特大うな丼">
       </div>
     </div>
   </div>
-  <!-- 水引：金・銀・朱の三本線 -->
+  <!-- 水引：金・白・金の三本線 -->
   <svg class="fv-mizuhiki" viewBox="0 0 1200 64" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M0 34 C 300 10, 520 58, 760 30 S 1080 18, 1200 32" fill="none" stroke="#b8955a" stroke-width="1.4"/>
-    <path d="M0 40 C 300 16, 520 64, 760 36 S 1080 24, 1200 38" fill="none" stroke="#d8bf8c" stroke-width="1"/>
-    <path d="M0 46 C 300 22, 520 70, 760 42 S 1080 30, 1200 44" fill="none" stroke="#9e2b22" stroke-width="1.4"/>
+    <path d="M0 34 C 300 10, 520 58, 760 30 S 1080 18, 1200 32" fill="none" stroke="#d8bf8c" stroke-width="1.6"/>
+    <path d="M0 40 C 300 16, 520 64, 760 36 S 1080 24, 1200 38" fill="none" stroke="#ffffff" stroke-width="1.6"/>
+    <path d="M0 46 C 300 22, 520 70, 760 42 S 1080 30, 1200 44" fill="none" stroke="#d8bf8c" stroke-width="1.6"/>
   </svg>
   <div class="inner">
     <a class="fv-coupon" href="#campaign">
@@ -554,8 +564,9 @@ ul,ol{list-style:none}
 <section class="outro">
   <div class="inner">
     <div class="rv">
+      <p class="ny">A Happy New Year</p>
       <h2>あの方の食卓に、<br>年の瀬のごちそうを。</h2>
-      <p>今年お世話になった方へ。<br>かわすいのうなぎで、あたたかな年末を。</p>
+      <p>今年お世話になった方へ。<br>かわすいのうなぎで、<br class="sp">晴れやかな新年を。</p>
     </div>
     <a class="btn rv" href="https://www.rakuten.co.jp/kawasui/">ショップを見る</a>
   </div>
