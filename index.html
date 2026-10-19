@@ -340,6 +340,69 @@ ul,ol{list-style:none}
   .fv-title{font-size:150px}
   .fv-copy{font-size:32px}
 }
+/* ================= 改訂2：迫力アップ・カレンダー縮小・早割バッジ ================= */
+.fv-title{font-size:96px}
+.fv-copy{font-size:24px;font-weight:700}
+.head h2{font-size:31px;font-weight:800}
+.rank h3{font-size:28px}
+.tier-head .yen{font-size:24px}
+.tier-head .yen .num{font-size:36px}
+
+/* 早割バッジ（朱の印） */
+.item .ph{position:relative}
+.badge{position:absolute;z-index:2;top:6px;right:6px;width:60px;height:60px;border-radius:50%;background:var(--shu);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;box-shadow:inset 0 0 0 2px var(--shu),inset 0 0 0 3px rgba(255,255,255,.8)}
+.badge .b1{font-family:var(--mincho);font-weight:800;font-size:11px;letter-spacing:.12em;margin-bottom:2px}
+.badge .b2{font-family:var(--num);font-weight:600;font-size:21px;letter-spacing:-.01em}
+.badge .b3{font-family:var(--num);font-weight:600;font-size:9px;letter-spacing:.14em;margin-top:1px}
+
+/* ポイントカレンダー：コンパクト */
+#calendar.sec{padding:64px 0}
+#calendar .head{margin-bottom:24px}
+#calendar .head h2{font-size:22px;font-weight:700}
+#calendar .head .lead{font-size:13px;margin-top:8px}
+#calendar .cal li{padding:10px 0;gap:0 10px;grid-template-columns:116px 1fr;align-items:center}
+#calendar .cal .date{flex-direction:column;gap:0}
+#calendar .cal .date .num{white-space:nowrap}
+#calendar .cal .what{gap:0 10px}
+#calendar .cal .date .num{font-size:18px}
+#calendar .cal .date small{font-size:11px}
+#calendar .cal .what b{font-size:15px}
+#calendar .cal .what span{font-size:12px}
+#calendar .cal .kind{font-size:10px}
+#calendar .cal-note{font-size:12px;margin-top:12px}
+
+@media (min-width:768px){
+  .head h2{font-size:58px}
+  .fv-title{font-size:170px}
+  .fv-copy{font-size:36px}
+  .fv-body{grid-template-columns:auto 470px 1fr}
+  .fv-body{position:relative}
+  .fv-body > div:nth-child(2){position:relative;z-index:2}
+  .fv-visual{position:absolute;top:190px;right:-150px;width:520px;margin:0}
+  .fv-visual img{width:100%;margin:0}
+  .fv-visual::before{width:70%;right:4%;top:-18%}
+  .rank h3{font-size:40px}
+  .tier-head .yen{font-size:40px}
+  .tier-head .yen .num{font-size:60px}
+  .outro h2{font-size:72px}
+  .badge{top:8px;right:8px;width:72px;height:72px}
+  .badge .b1{font-size:12px}
+  .badge .b2{font-size:26px}
+  .badge .b3{font-size:10px}
+
+  #calendar.sec{padding:80px 0}
+  #calendar .cal-wrap{grid-template-columns:240px 1fr;gap:48px}
+  #calendar .head{position:static}
+  #calendar .head h2{font-size:26px}
+  #calendar .cal li{grid-template-columns:200px 1fr;padding:12px 0}
+  #calendar .cal .date{flex-direction:row;align-items:baseline;gap:8px}
+  #calendar .cal .date .num{font-size:20px}
+  #calendar .cal .what b{font-size:16px}
+}
+@media (min-width:1100px){
+  .fv-title{font-size:190px}
+  .fv-copy{font-size:38px}
+}
 </style>
 </head>
 <body>
@@ -352,7 +415,7 @@ ul,ol{list-style:none}
       <h1 class="fv-title">御歳暮<small>Oseibo 2026</small></h1>
       <div>
         <p class="fv-copy rv">一年分の<br class="sp">ありがとうを、<br><em>炭火の香り</em>に<br class="sp">のせて。</p>
-        <p class="fv-sub rv">国産うなぎ蒲焼きの贈りもの。<br>新しい年を迎える食卓へ、<br>送料無料・のし無料で<br class="sp">お届けします。</p>
+        <p class="fv-sub rv">国産うなぎ蒲焼きの<br class="sp">贈りもの。<br>新しい年を迎える食卓へ、<br>送料無料・のし無料で<br class="sp">お届けします。</p>
       </div>
       <div class="fv-visual">
         <img src="https://www.rakuten.ne.jp/gold/kawasui/page/os/images/fv-don.png" width="692" height="514" alt="国産うなぎ蒲焼きの特大うな丼">
@@ -485,29 +548,29 @@ ul,ol{list-style:none}
     <div class="tier rv">
       <h3 class="tier-head"><span class="yen"><span class="num">5,000</span>円未満</span><span class="d">気軽に贈れる</span></h3>
       <div class="items">
-        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002290/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-k1002ks2_601.jpg" alt="きざみと肝吸いギフト" loading="lazy"></div><h4>きざみと肝吸いギフト</h4><p class="price num">3,990<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
-        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002289/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-kb1701ks1sn_601.jpg" alt="長焼きと肝吸いギフト" loading="lazy"></div><h4>長焼きと肝吸いギフト</h4><p class="price num">4,180<small>円〜</small></p><p class="tg">送料無料・冷凍便</p></a>
-        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002526/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/imgrc0109082864.jpg" alt="うなぎのおつまみセット" loading="lazy"></div><h4>うなぎの<br>おつまみセット</h4><p class="price num">4,800<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002290/"><div class="ph"><span class="badge" aria-label="早割10%OFF対象"><span class="b1">早割</span><span class="b2">10%</span><span class="b3">OFF</span></span><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-k1002ks2_601.jpg" alt="きざみと肝吸いギフト" loading="lazy"></div><h4>きざみと肝吸いギフト</h4><p class="price num">3,990<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002289/"><div class="ph"><span class="badge" aria-label="早割10%OFF対象"><span class="b1">早割</span><span class="b2">10%</span><span class="b3">OFF</span></span><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-kb1701ks1sn_601.jpg" alt="長焼きと肝吸いギフト" loading="lazy"></div><h4>長焼きと肝吸いギフト</h4><p class="price num">4,180<small>円〜</small></p><p class="tg">送料無料・冷凍便</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002526/"><div class="ph"><span class="badge" aria-label="早割10%OFF対象"><span class="b1">早割</span><span class="b2">10%</span><span class="b3">OFF</span></span><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/imgrc0109082864.jpg" alt="うなぎのおつまみセット" loading="lazy"></div><h4>うなぎの<br>おつまみセット</h4><p class="price num">4,800<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
       </div>
     </div>
 
     <div class="tier rv">
       <h3 class="tier-head"><span class="yen"><span class="num">5,000 – 6,000</span>円台</span><span class="d">しっかり贅沢に</span></h3>
       <div class="items">
-        <a class="item" href="https://item.rakuten.co.jp/kawasui/10001981/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/check/cut4200km2_601.jpg" alt="カットと肝吸いギフト" loading="lazy"></div><h4>カットと肝吸いギフト</h4><p class="price num">5,990<small>円〜</small></p><p class="tg">送料無料・冷凍便</p></a>
-        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002534/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/ncimag00/cut2100snj-3_601.jpg" alt="常温タイプ 蒲焼きカット3人前ギフト" loading="lazy"></div><h4><span class="rt">常温タイプ</span>蒲焼きカット<br>3人前ギフト</h4><p class="price num">5,990<small>円〜</small></p><p class="tg">送料無料・冷凍庫いらず</p></a>
-        <a class="item" href="https://item.rakuten.co.jp/kawasui/10001980/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/kb200ki2_601.jpg" alt="超特大うなぎときざみセット" loading="lazy"></div><h4>超特大うなぎと<br>きざみセット</h4><p class="price num">6,480<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
-        <a class="item" href="https://item.rakuten.co.jp/kawasui/10001990/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-kb1701cut2sn_601.jpg" alt="特大うなぎ長焼きと蒲焼きカット" loading="lazy"></div><h4>特大うなぎ長焼きと<br>蒲焼きカット</h4><p class="price num">6,990<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10001981/"><div class="ph"><span class="badge" aria-label="早割10%OFF対象"><span class="b1">早割</span><span class="b2">10%</span><span class="b3">OFF</span></span><img src="https://shop.r10s.jp/kawasui/cabinet/check/cut4200km2_601.jpg" alt="カットと肝吸いギフト" loading="lazy"></div><h4>カットと肝吸いギフト</h4><p class="price num">5,990<small>円〜</small></p><p class="tg">送料無料・冷凍便</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002534/"><div class="ph"><span class="badge" aria-label="早割10%OFF対象"><span class="b1">早割</span><span class="b2">10%</span><span class="b3">OFF</span></span><img src="https://shop.r10s.jp/kawasui/cabinet/ncimag00/cut2100snj-3_601.jpg" alt="常温タイプ 蒲焼きカット3人前ギフト" loading="lazy"></div><h4><span class="rt">常温タイプ</span>蒲焼きカット<br>3人前ギフト</h4><p class="price num">5,990<small>円〜</small></p><p class="tg">送料無料・冷凍庫いらず</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10001980/"><div class="ph"><span class="badge" aria-label="早割10%OFF対象"><span class="b1">早割</span><span class="b2">10%</span><span class="b3">OFF</span></span><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/kb200ki2_601.jpg" alt="超特大うなぎときざみセット" loading="lazy"></div><h4>超特大うなぎと<br>きざみセット</h4><p class="price num">6,480<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10001990/"><div class="ph"><span class="badge" aria-label="早割10%OFF対象"><span class="b1">早割</span><span class="b2">10%</span><span class="b3">OFF</span></span><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-kb1701cut2sn_601.jpg" alt="特大うなぎ長焼きと蒲焼きカット" loading="lazy"></div><h4>特大うなぎ長焼きと<br>蒲焼きカット</h4><p class="price num">6,990<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
       </div>
     </div>
 
     <div class="tier premium rv">
       <h3 class="tier-head"><span class="yen"><span class="num">7,000</span>円以上</span><span class="d">特別なあの方へ</span></h3>
       <div class="items">
-        <a class="item" href="https://item.rakuten.co.jp/kawasui/10000113/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-kb1702sn_601.jpg" alt="特大うなぎ蒲焼き170g×2本" loading="lazy"></div><h4>特大うなぎ蒲焼き<br>170g×2本</h4><p class="price num">8,210<small>円〜</small></p><p class="tg">送料無料・冷凍便</p></a>
-        <a class="item" href="https://item.rakuten.co.jp/kawasui/10000114/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-kb1703sn_601.jpg" alt="特大うなぎ蒲焼き170g×3本" loading="lazy"></div><h4>特大うなぎ蒲焼き<br>170g×3本</h4><p class="price num">10,910<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
-        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002456/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-kb1704sn_601.jpg" alt="特大うなぎ蒲焼き170g×4本" loading="lazy"></div><h4>特大うなぎ蒲焼き<br>170g×4本</h4><p class="price num">14,020<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
-        <a class="item" href="https://item.rakuten.co.jp/kawasui/10000104/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-kb1705sn_601.jpg" alt="特大うなぎ蒲焼き170g×5本" loading="lazy"></div><h4>特大うなぎ蒲焼き<br>170g×5本</h4><p class="price num">16,920<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10000113/"><div class="ph"><span class="badge" aria-label="早割10%OFF対象"><span class="b1">早割</span><span class="b2">10%</span><span class="b3">OFF</span></span><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-kb1702sn_601.jpg" alt="特大うなぎ蒲焼き170g×2本" loading="lazy"></div><h4>特大うなぎ蒲焼き<br>170g×2本</h4><p class="price num">8,210<small>円〜</small></p><p class="tg">送料無料・冷凍便</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10000114/"><div class="ph"><span class="badge" aria-label="早割10%OFF対象"><span class="b1">早割</span><span class="b2">10%</span><span class="b3">OFF</span></span><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-kb1703sn_601.jpg" alt="特大うなぎ蒲焼き170g×3本" loading="lazy"></div><h4>特大うなぎ蒲焼き<br>170g×3本</h4><p class="price num">10,910<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002456/"><div class="ph"><span class="badge" aria-label="早割10%OFF対象"><span class="b1">早割</span><span class="b2">10%</span><span class="b3">OFF</span></span><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-kb1704sn_601.jpg" alt="特大うなぎ蒲焼き170g×4本" loading="lazy"></div><h4>特大うなぎ蒲焼き<br>170g×4本</h4><p class="price num">14,020<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10000104/"><div class="ph"><span class="badge" aria-label="早割10%OFF対象"><span class="b1">早割</span><span class="b2">10%</span><span class="b3">OFF</span></span><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-kb1705sn_601.jpg" alt="特大うなぎ蒲焼き170g×5本" loading="lazy"></div><h4>特大うなぎ蒲焼き<br>170g×5本</h4><p class="price num">16,920<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
       </div>
     </div>
     <p class="price-note">※表示価格はクーポン適用前の価格です。</p>
