@@ -443,6 +443,10 @@ ul,ol{list-style:none}
   .fv-stage{z-index:4}
   .fv-mizuhiki{margin-top:-30px}
 }
+#calendar .cal .what a{color:inherit;border-bottom:1px solid var(--kin);transition:color .3s}
+#calendar .cal .what a:hover{color:var(--shu)}
+#calendar .cal li{grid-template-columns:128px 1fr}
+@media (min-width:768px){#calendar .cal li{grid-template-columns:200px 1fr}#calendar .cal .date{flex-direction:column;gap:0}}
 </style>
 </head>
 <body>
@@ -462,7 +466,7 @@ ul,ol{list-style:none}
     <div class="fv-body">
       <h1 class="fv-title">御歳暮<small>Oseibo 2026</small></h1>
       <div>
-        <p class="fv-copy rv">一年分の<br class="sp">ありがとうを、<br><em>炭火の香り</em>に<br class="sp">のせて。</p>
+        <p class="fv-copy rv">一年分の<br class="sp">ありがとうを、<br><em>極上の一枚</em>に<br class="sp">のせて。</p>
         <p class="fv-sub rv">国産うなぎ蒲焼きの<br class="sp">贈りもの。<br>新しい年を迎える食卓へ、<br>送料無料・のし無料で<br class="sp">お届けします。</p>
       </div>
     </div>
@@ -541,6 +545,8 @@ ul,ol{list-style:none}
       <div class="items">
         <a class="item" href="https://item.rakuten.co.jp/kawasui/10002492/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/r-set/ms-nzo_601.jpg" alt="3種類から選べる生ズワイガニ" loading="lazy"></div><h4>生ズワイガニ<br>3種から選べる</h4><p class="price num">8,000<small>円</small></p><p class="tg">送料無料・冷凍便・のし対応</p></a>
         <a class="item" href="https://item.rakuten.co.jp/kawasui/10002403/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/ncimag00/ms-kshm-500_601.jpg" alt="紀州串本産 本マグロ 赤身・トロ500g" loading="lazy"></div><h4>紀州串本産 本マグロ<br>赤身・トロ 500g</h4><p class="price num">8,980<small>円</small></p><p class="tg">送料無料・冷凍便・<span class="ng">のし・包装不可</span></p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002407/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/mikan/m-terawase_fk01.jpg" alt="有田みかん 寺嶋さんのみかん" loading="lazy"></div><h4>有田から産直 有田みかん<br>寺嶋さんのみかん</h4><p class="price num">2,480<small>円〜</small></p><p class="tg">送料無料・常温便・のし対応・<span class="ng">包装不可</span><br>11月下旬以降発送</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002415/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/mikan/m-ikowase_fk01.jpg" alt="有田みかん 生駒さんのみかん" loading="lazy"></div><h4>有田から産直 有田みかん<br>生駒さんのみかん</h4><p class="price num">2,480<small>円〜</small></p><p class="tg">送料無料・常温便・のし対応・<span class="ng">包装不可</span><br>11月下旬以降発送</p></a>
       </div>
     </div>
     <p class="excl rv">※このエリアの商品は、早割クーポンの対象外です。</p>
@@ -624,7 +630,7 @@ ul,ol{list-style:none}
 </section>
 
 <!-- ================= ポイントアップカレンダー ================= -->
-<!-- 期間は入稿済みの広告枠に合わせています。開始・終了時刻と対象商品は要記入 -->
+<!-- 内容は本番ページ(2026-10-19時点)のポイントアップカレンダーに合わせています -->
 <section class="sec" id="calendar">
   <div class="inner cal-wrap">
     <div class="head rv">
@@ -634,15 +640,14 @@ ul,ol{list-style:none}
     </div>
     <div>
       <ul class="cal">
-        <li class="hot"><div class="date"><span class="num">11/1 – 11/3</span><small>日〜火・祝</small></div><div class="what"><i class="kind">週末企画</i><b>ポイント15倍</b><span>対象：【商品名】</span></div></li>
-        <li><div class="date"><span class="num">11/1 – 11/15</span><small>日〜日</small></div><div class="what"><b>ポイント最大10倍</b><span>対象：【商品名】</span></div></li>
-        <li><div class="date"><span class="num">11/16 – 11/23</span><small>月〜月・祝</small></div><div class="what"><b>ポイント最大10倍</b><span>対象：【商品名】</span></div></li>
-        <li class="hot"><div class="date"><span class="num">11/20 – 11/23</span><small>金〜月・祝</small></div><div class="what"><i class="kind">週末企画</i><b>ポイント15倍</b><span>対象：【商品名】</span></div></li>
-        <li><div class="date"><span class="num">11/30 – 12/6</span><small>月〜日</small></div><div class="what"><b>ポイント最大10倍</b><span>対象：【商品名】</span></div></li>
-        <li class="hot"><div class="date"><span class="num">12/11 – 12/13</span><small>金〜日</small></div><div class="what"><i class="kind">週末企画</i><b>ポイント15倍</b><span>対象：【商品名】</span></div></li>
-        <li><div class="date"><span class="num">12/14 – 12/28</span><small>月〜月</small></div><div class="what"><b>ポイント最大10倍</b><span>対象：【商品名】</span></div></li>
+        <li class="hot"><div class="date"><span class="num">11/1 – 11/4</span><small>日 10:00 〜 水 9:59</small></div><div class="what"><i class="kind">週末企画</i><b>ポイント15倍</b><span>対象：<a href="https://item.rakuten.co.jp/kawasui/10001981/">カットと肝吸いギフト</a></span></div></li>
+        <li><div class="date"><span class="num">11/1 – 11/16</span><small>日 10:00 〜 月 9:59</small></div><div class="what"><b>ポイント10倍</b><span>対象：<a href="https://item.rakuten.co.jp/kawasui/10002290/">きざみと肝吸いギフト</a></span></div></li>
+        <li><div class="date"><span class="num">11/16 – 11/24</span><small>月 10:00 〜 火 9:59</small></div><div class="what"><b>ポイント10倍</b><span>対象：<a href="https://item.rakuten.co.jp/kawasui/10000113/">特大うなぎ蒲焼き 2尾ギフト</a></span></div></li>
+        <li class="hot"><div class="date"><span class="num">11/20 – 11/24</span><small>金 10:00 〜 火 9:59</small></div><div class="what"><i class="kind">週末企画</i><b>ポイント15倍</b><span>対象：<a href="https://item.rakuten.co.jp/kawasui/10001980/">超特大うなぎときざみギフト</a></span></div></li>
+        <li><div class="date"><span class="num">11/30 – 12/7</span><small>月 10:00 〜 月 9:59</small></div><div class="what"><b>ポイント10倍</b><span>対象：<a href="https://item.rakuten.co.jp/kawasui/10002289/">長焼きと肝吸いギフト</a></span></div></li>
+        <li class="hot"><div class="date"><span class="num">12/11 – 12/14</span><small>金 10:00 〜 月 9:59</small></div><div class="what"><i class="kind">週末企画</i><b>ポイント15倍</b><span>対象：<a href="https://item.rakuten.co.jp/kawasui/10002526/">おつまみセット</a></span></div></li>
+        <li><div class="date"><span class="num">12/14 – 12/29</span><small>月 10:00 〜 火 9:59</small></div><div class="what"><b>ポイント10倍</b><span>対象：<a href="https://item.rakuten.co.jp/kawasui/10001981/">カットと肝吸いギフト</a></span></div></li>
       </ul>
-      <p class="cal-note">※各期間の開始・終了時刻：【要記入】</p>
     </div>
   </div>
 </section>
