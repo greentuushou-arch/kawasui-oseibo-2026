@@ -403,12 +403,41 @@ ul,ol{list-style:none}
   .fv-title{font-size:190px}
   .fv-copy{font-size:38px}
 }
+/* ================= 改訂3：写真FV（お盆のうな丼・赤背景） ================= */
+.fv-stage{position:relative}
+.fv-stage .inner{position:relative;z-index:2}
+.fv-photo{position:relative;margin:6px 0 0;pointer-events:none}
+.fv-photo::before{content:"";position:absolute;width:38%;aspect-ratio:1;right:7%;top:0;border-radius:50%;background:radial-gradient(circle at 50% 45%,#ecd49c 0%,#d2b06e 62%,#b8914f 100%)}
+.fv-photo picture,.fv-photo img{position:relative;display:block;width:100%;height:auto}
+.fv-photo img{-webkit-mask-image:linear-gradient(to bottom,#000 86%,transparent 100%);mask-image:linear-gradient(to bottom,#000 86%,transparent 100%)}
+.fv-mizuhiki{margin-top:-30px;z-index:3}
+.fv-stage{display:flex;flex-direction:column}
+.fv-stage .inner{order:1}
+.fv-stage .fv-photo{order:2}
+@media (min-width:768px){
+  .fv-stage{display:block;min-height:min(80vw,840px)}
+  .fv-photo{position:absolute;z-index:1;right:0;bottom:0;width:min(52vw,620px);margin:0}
+  .fv-photo::before{width:40%;right:8%;top:4%}
+  .fv-photo img{-webkit-mask-image:linear-gradient(to right,transparent 0,#000 9%),linear-gradient(to bottom,#000 88%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent 0,#000 9%),linear-gradient(to bottom,#000 88%,transparent 100%);mask-composite:intersect}
+  .fv-body{grid-template-columns:auto 1fr;padding-bottom:80px}
+  .fv-mizuhiki{margin-top:-40px}
+}
+@media (min-width:1100px){
+  .fv-stage{min-height:860px}
+}
 </style>
 </head>
 <body>
 
 <!-- ================= FV ================= -->
 <header class="fv">
+  <div class="fv-stage">
+  <div class="fv-photo" aria-hidden="false">
+    <picture>
+      <source srcset="images/fv-hero.webp" type="image/webp">
+      <img src="images/fv-hero.png" width="900" height="1188" alt="お盆にのせた国産うなぎの蒲焼き丼と肝の小鉢">
+    </picture>
+  </div>
   <div class="inner">
     <div class="fv-top"><b>うなぎ屋かわすい</b><span class="num">WINTER GIFT 2026</span></div>
     <div class="fv-body">
@@ -417,10 +446,8 @@ ul,ol{list-style:none}
         <p class="fv-copy rv">一年分の<br class="sp">ありがとうを、<br><em>炭火の香り</em>に<br class="sp">のせて。</p>
         <p class="fv-sub rv">国産うなぎ蒲焼きの<br class="sp">贈りもの。<br>新しい年を迎える食卓へ、<br>送料無料・のし無料で<br class="sp">お届けします。</p>
       </div>
-      <div class="fv-visual">
-        <img src="https://www.rakuten.ne.jp/gold/kawasui/page/os/images/fv-don.png" width="692" height="514" alt="国産うなぎ蒲焼きの特大うな丼">
-      </div>
     </div>
+  </div>
   </div>
   <!-- 水引：金・白・金の三本線 -->
   <svg class="fv-mizuhiki" viewBox="0 0 1200 64" preserveAspectRatio="none" aria-hidden="true">
