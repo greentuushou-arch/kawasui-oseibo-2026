@@ -439,7 +439,7 @@ ul,ol{list-style:none}
   .fv-stage{display:block}
   .fv-body{grid-template-columns:auto 1fr;padding-bottom:48px}
   /* 写真の下端を「御歳暮」の下端にそろえる */
-  .fv-photo{position:absolute;z-index:1;bottom:58px;right:max(10px,calc((100vw - 1300px) / 2));width:min(47vw,650px);margin:0}
+  .fv-photo{position:absolute;z-index:1;bottom:58px;right:max(10px,calc((100vw - 1400px) / 2));width:min(47vw,650px);margin:0}
   .fv-stage{z-index:4}
   .fv-mizuhiki{margin-top:-30px}
 }
@@ -447,6 +447,8 @@ ul,ol{list-style:none}
 #calendar .cal .what a:hover{color:var(--shu)}
 #calendar .cal li{grid-template-columns:128px 1fr}
 @media (min-width:768px){#calendar .cal li{grid-template-columns:200px 1fr}#calendar .cal .date{flex-direction:column;gap:0}}
+.pcbr{display:none}
+@media (min-width:768px){.pcbr{display:inline}}
 </style>
 </head>
 <body>
@@ -466,7 +468,7 @@ ul,ol{list-style:none}
     <div class="fv-body">
       <h1 class="fv-title">御歳暮<small>Oseibo 2026</small></h1>
       <div>
-        <p class="fv-copy rv">一年分の<br class="sp">ありがとうを、<br><em>極上の一枚</em>に<br class="sp">のせて。</p>
+        <p class="fv-copy rv">一年分の<br class="sp">ありがとうを、<br><em>とっておきの</em><br class="sp"><em>一膳</em>に<br class="pcbr">のせて。</p>
         <p class="fv-sub rv">国産うなぎ蒲焼きの<br class="sp">贈りもの。<br>新しい年を迎える食卓へ、<br>送料無料・のし無料で<br class="sp">お届けします。</p>
       </div>
     </div>
