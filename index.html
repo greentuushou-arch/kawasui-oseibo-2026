@@ -9,8 +9,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;700&family=EB+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --sumi:#55100d;      /* 臙脂（暗いセクション） */
-  --urushi:#470c0a;    /* ナビ */
+  --sumi:#7a1611;      /* 暗いセクション：赤寄りの臙脂 */
+  --urushi:#5e100c;    /* ナビ */
   --beni:#9c1c16;      /* 紅：FV・締め */
   --beni-d:#741310;
   --line-d:rgba(201,169,110,.28);
@@ -403,32 +403,44 @@ ul,ol{list-style:none}
   .fv-title{font-size:190px}
   .fv-copy{font-size:38px}
 }
-/* ================= 改訂4：うな丼＋金箔FV ================= */
+/* ================= 改訂5：うな丼＋舞う金粉FV ================= */
 .fv-stage{position:relative;display:flex;flex-direction:column}
 .fv-stage .inner{position:relative;z-index:2;order:1}
-.fv-photo{position:relative;order:2;margin:-6px -20px 0;pointer-events:none}
-.don-box{position:relative;width:100%;aspect-ratio:6/5}
+.fv-photo{position:relative;order:2;margin:-10px -20px 0;pointer-events:none}
+.don-box{position:relative;width:100%;aspect-ratio:13/10}
 /* 器の後ろの光：切り抜きの境目を背景になじませる */
-.don-box::before{content:"";position:absolute;left:4%;right:4%;top:14%;bottom:0;background:radial-gradient(ellipse 50% 46% at 50% 58%,rgba(255,196,128,.42) 0%,rgba(255,150,90,.16) 45%,transparent 72%)}
-.gl{position:absolute;inset:0}
-.gl img{width:100%;height:100%;display:block}
-.gl-back{animation:glFloat 9s ease-in-out infinite alternate}
-@keyframes glFloat{from{transform:translateY(0)}to{transform:translateY(-10px)}}
+.don-box::before{content:"";position:absolute;left:2%;right:2%;top:4%;bottom:0;background:radial-gradient(ellipse 52% 48% at 50% 60%,rgba(255,196,128,.42) 0%,rgba(255,150,90,.16) 45%,transparent 72%)}
 /* 接地の影 */
-.don-shadow{position:absolute;left:19%;right:19%;bottom:2.5%;height:9%;border-radius:50%;background:radial-gradient(ellipse at center,rgba(45,0,0,.62) 0%,rgba(45,0,0,.3) 45%,transparent 72%)}
-.don{position:absolute;left:12%;width:76%;bottom:5%}
+.don-shadow{position:absolute;left:17%;right:17%;bottom:1.5%;height:10%;border-radius:50%;background:radial-gradient(ellipse at center,rgba(45,0,0,.62) 0%,rgba(45,0,0,.3) 45%,transparent 72%)}
+.don{position:absolute;left:8%;width:84%;bottom:4%}
 .don img{display:block;width:100%;height:auto;filter:drop-shadow(0 18px 22px rgba(50,0,0,.45)) drop-shadow(0 0 1px rgba(80,10,0,.6))}
-@media (prefers-reduced-motion:reduce){.gl-back{animation:none}}
+
+/* 舞う金粉：ひらひら落ちる箔＋きらめき */
+.gold-dust{position:absolute;inset:-34% -8% 0 -22%;overflow:hidden;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 12%,#000 82%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 12%,#000 82%,transparent 100%)}
+.flake{position:absolute;top:0;left:var(--x);width:var(--s);height:var(--s);opacity:0;animation:dustFall var(--d) linear var(--dl) infinite}
+.flake i{display:block;width:100%;height:100%;clip-path:var(--cp);background:linear-gradient(135deg,#8a6420 0%,#e6c47a 38%,#fff3c4 50%,#d4a94f 62%,#8a6420 100%);background-size:220% 220%;animation:dustFlip var(--fd) ease-in-out var(--dl) infinite}
+@keyframes dustFall{
+  0%{opacity:0;transform:translate3d(0,0,0) rotate(0deg)}
+  10%{opacity:var(--o)}
+  50%{transform:translate3d(var(--sw),calc(var(--fall) * .5),0) rotate(calc(var(--r) * .5))}
+  85%{opacity:var(--o)}
+  100%{opacity:0;transform:translate3d(calc(var(--sw) * -.4),var(--fall),0) rotate(var(--r))}
+}
+@keyframes dustFlip{
+  0%,100%{transform:rotateX(0deg) rotateY(0deg);background-position:0% 0%}
+  50%{transform:rotateX(70deg) rotateY(40deg);background-position:100% 100%}
+}
+.glint{position:absolute;left:var(--x);top:var(--y);width:var(--s);height:var(--s);background:radial-gradient(circle,#fffbe8 0%,#ffe7a3 35%,rgba(255,215,130,0) 70%);clip-path:polygon(50% 0,58% 42%,100% 50%,58% 58%,50% 100%,42% 58%,0 50%,42% 42%);opacity:0;animation:glint var(--d) ease-in-out var(--dl) infinite}
+@keyframes glint{0%,70%,100%{opacity:0;transform:scale(.2) rotate(0deg)}82%{opacity:1;transform:scale(1) rotate(45deg)}}
+@media (prefers-reduced-motion:reduce){.flake,.flake i,.glint{animation:none}.flake{opacity:.8;transform:translateY(calc(var(--fall) * var(--p)))}}
+
 .fv-mizuhiki{margin-top:-24px;z-index:3}
 @media (min-width:768px){
-  .fv-stage{display:block;min-height:min(70vw,760px)}
-  .fv-photo{position:absolute;z-index:1;right:max(-10px,calc((100vw - 1260px) / 2));bottom:10px;width:min(50vw,680px);margin:0}
-  .gl-back{-webkit-mask-image:linear-gradient(to right,transparent 0,#000 26%);mask-image:linear-gradient(to right,transparent 0,#000 26%)}
-  .fv-body{grid-template-columns:auto 1fr;padding-bottom:80px}
-  .fv-mizuhiki{margin-top:-40px}
-}
-@media (min-width:1100px){
-  .fv-stage{min-height:800px}
+  .fv-stage{display:block}
+  .fv-body{grid-template-columns:auto 1fr;padding-bottom:48px}
+  /* 写真の下端を「御歳暮」の下端にそろえる */
+  .fv-photo{position:absolute;z-index:1;bottom:48px;right:max(-20px,calc((100vw - 1320px) / 2));width:min(42vw,600px);margin:0}
+  .fv-mizuhiki{margin-top:-30px}
 }
 </style>
 </head>
@@ -439,10 +451,9 @@ ul,ol{list-style:none}
   <div class="fv-stage">
   <div class="fv-photo">
     <div class="don-box">
-      <picture class="gl gl-back" aria-hidden="true"><source srcset="images/fv-goldleaf-back.webp" type="image/webp"><img src="images/fv-goldleaf-back.png" width="1200" height="1000" alt=""></picture>
       <span class="don-shadow" aria-hidden="true"></span>
       <picture class="don"><source srcset="images/fv-don.webp" type="image/webp"><img src="images/fv-don.png" width="795" height="591" alt="国産うなぎ蒲焼きの特大うな丼"></picture>
-      <picture class="gl gl-front" aria-hidden="true"><source srcset="images/fv-goldleaf-front.webp" type="image/webp"><img src="images/fv-goldleaf-front.png" width="1200" height="1000" alt=""></picture>
+      <div class="gold-dust" aria-hidden="true"></div>
     </div>
   </div>
   <div class="inner">
@@ -679,6 +690,42 @@ ul,ol{list-style:none}
 </section>
 <div class="foot">うなぎ屋かわすい ｜ お歳暮特集 2026</div>
 
+<script>
+/* 舞う金粉 */
+(function(){
+  var box=document.querySelector('.gold-dust');
+  if(!box) return;
+  var pc=window.matchMedia('(min-width:768px)').matches;
+  var rnd=function(a,b){return a+Math.random()*(b-a)};
+  function poly(){
+    var n=5+Math.floor(Math.random()*4),r0=Math.random()*6.28,pts=[];
+    for(var i=0;i<n;i++){
+      var a=r0+i*6.283/n+rnd(-.35,.35),rr=rnd(28,50);
+      pts.push((50+Math.cos(a)*rr).toFixed(1)+'% '+(50+Math.sin(a)*rr).toFixed(1)+'%');
+    }
+    return 'polygon('+pts.join(',')+')';
+  }
+  var flakes=pc?46:34,glints=pc?12:8,frag=document.createDocumentFragment();
+  for(var i=0;i<flakes;i++){
+    var f=document.createElement('span'),d=rnd(8,15),big=Math.random()<.3;
+    f.className='flake';
+    f.style.cssText='--x:'+rnd(0,96).toFixed(1)+'%;--s:'+(big?rnd(10,18):rnd(4,9)).toFixed(1)+'px;--d:'+d.toFixed(1)+'s;--dl:'+(-rnd(0,d)).toFixed(1)+'s;--sw:'+rnd(-40,40).toFixed(0)+'px;--r:'+rnd(-540,540).toFixed(0)+'deg;--o:'+rnd(.65,1).toFixed(2)+';--fd:'+rnd(1.6,3.4).toFixed(1)+'s;--cp:'+poly()+';--p:'+Math.random().toFixed(2);
+    f.appendChild(document.createElement('i'));
+    frag.appendChild(f);
+  }
+  for(var j=0;j<glints;j++){
+    var g=document.createElement('span');
+    g.className='glint';
+    g.style.cssText='--x:'+rnd(6,92).toFixed(1)+'%;--y:'+rnd(14,80).toFixed(1)+'%;--s:'+rnd(16,30).toFixed(0)+'px;--d:'+rnd(3,5.5).toFixed(1)+'s;--dl:'+(-rnd(0,5)).toFixed(1)+'s';
+    frag.appendChild(g);
+  }
+  box.appendChild(frag);
+  /* translateY(%)は要素自身の高さ基準になるため、落下距離はpxで渡す */
+  function setFall(){box.style.setProperty('--fall',Math.round(box.offsetHeight*1.05)+'px');}
+  setFall();
+  window.addEventListener('resize',setFall);
+})();
+</script>
 <script>
 (function(){
   var els=document.querySelectorAll('.rv');
