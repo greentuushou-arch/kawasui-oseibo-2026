@@ -403,27 +403,32 @@ ul,ol{list-style:none}
   .fv-title{font-size:190px}
   .fv-copy{font-size:38px}
 }
-/* ================= 改訂3：写真FV（お盆のうな丼・赤背景） ================= */
-.fv-stage{position:relative}
-.fv-stage .inner{position:relative;z-index:2}
-.fv-photo{position:relative;margin:6px 0 0;pointer-events:none}
-.fv-photo::before{content:"";position:absolute;width:38%;aspect-ratio:1;right:7%;top:0;border-radius:50%;background:radial-gradient(circle at 50% 45%,#ecd49c 0%,#d2b06e 62%,#b8914f 100%)}
-.fv-photo picture,.fv-photo img{position:relative;display:block;width:100%;height:auto}
-.fv-photo img{-webkit-mask-image:linear-gradient(to bottom,#000 86%,transparent 100%);mask-image:linear-gradient(to bottom,#000 86%,transparent 100%)}
-.fv-mizuhiki{margin-top:-30px;z-index:3}
-.fv-stage{display:flex;flex-direction:column}
-.fv-stage .inner{order:1}
-.fv-stage .fv-photo{order:2}
+/* ================= 改訂4：うな丼＋金箔FV ================= */
+.fv-stage{position:relative;display:flex;flex-direction:column}
+.fv-stage .inner{position:relative;z-index:2;order:1}
+.fv-photo{position:relative;order:2;margin:-6px -20px 0;pointer-events:none}
+.don-box{position:relative;width:100%;aspect-ratio:6/5}
+/* 器の後ろの光：切り抜きの境目を背景になじませる */
+.don-box::before{content:"";position:absolute;left:4%;right:4%;top:14%;bottom:0;background:radial-gradient(ellipse 50% 46% at 50% 58%,rgba(255,196,128,.42) 0%,rgba(255,150,90,.16) 45%,transparent 72%)}
+.gl{position:absolute;inset:0}
+.gl img{width:100%;height:100%;display:block}
+.gl-back{animation:glFloat 9s ease-in-out infinite alternate}
+@keyframes glFloat{from{transform:translateY(0)}to{transform:translateY(-10px)}}
+/* 接地の影 */
+.don-shadow{position:absolute;left:19%;right:19%;bottom:2.5%;height:9%;border-radius:50%;background:radial-gradient(ellipse at center,rgba(45,0,0,.62) 0%,rgba(45,0,0,.3) 45%,transparent 72%)}
+.don{position:absolute;left:12%;width:76%;bottom:5%}
+.don img{display:block;width:100%;height:auto;filter:drop-shadow(0 18px 22px rgba(50,0,0,.45)) drop-shadow(0 0 1px rgba(80,10,0,.6))}
+@media (prefers-reduced-motion:reduce){.gl-back{animation:none}}
+.fv-mizuhiki{margin-top:-24px;z-index:3}
 @media (min-width:768px){
-  .fv-stage{display:block;min-height:min(80vw,840px)}
-  .fv-photo{position:absolute;z-index:1;right:0;bottom:0;width:min(52vw,620px);margin:0}
-  .fv-photo::before{width:40%;right:8%;top:4%}
-  .fv-photo img{-webkit-mask-image:linear-gradient(to right,transparent 0,#000 9%),linear-gradient(to bottom,#000 88%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent 0,#000 9%),linear-gradient(to bottom,#000 88%,transparent 100%);mask-composite:intersect}
+  .fv-stage{display:block;min-height:min(70vw,760px)}
+  .fv-photo{position:absolute;z-index:1;right:max(-10px,calc((100vw - 1260px) / 2));bottom:10px;width:min(50vw,680px);margin:0}
+  .gl-back{-webkit-mask-image:linear-gradient(to right,transparent 0,#000 26%);mask-image:linear-gradient(to right,transparent 0,#000 26%)}
   .fv-body{grid-template-columns:auto 1fr;padding-bottom:80px}
   .fv-mizuhiki{margin-top:-40px}
 }
 @media (min-width:1100px){
-  .fv-stage{min-height:860px}
+  .fv-stage{min-height:800px}
 }
 </style>
 </head>
@@ -432,11 +437,13 @@ ul,ol{list-style:none}
 <!-- ================= FV ================= -->
 <header class="fv">
   <div class="fv-stage">
-  <div class="fv-photo" aria-hidden="false">
-    <picture>
-      <source srcset="images/fv-hero.webp" type="image/webp">
-      <img src="images/fv-hero.png" width="900" height="1188" alt="お盆にのせた国産うなぎの蒲焼き丼と肝の小鉢">
-    </picture>
+  <div class="fv-photo">
+    <div class="don-box">
+      <picture class="gl gl-back" aria-hidden="true"><source srcset="images/fv-goldleaf-back.webp" type="image/webp"><img src="images/fv-goldleaf-back.png" width="1200" height="1000" alt=""></picture>
+      <span class="don-shadow" aria-hidden="true"></span>
+      <picture class="don"><source srcset="images/fv-don.webp" type="image/webp"><img src="images/fv-don.png" width="795" height="591" alt="国産うなぎ蒲焼きの特大うな丼"></picture>
+      <picture class="gl gl-front" aria-hidden="true"><source srcset="images/fv-goldleaf-front.webp" type="image/webp"><img src="images/fv-goldleaf-front.png" width="1200" height="1000" alt=""></picture>
+    </div>
   </div>
   <div class="inner">
     <div class="fv-top"><b>うなぎ屋かわすい</b><span class="num">WINTER GIFT 2026</span></div>
