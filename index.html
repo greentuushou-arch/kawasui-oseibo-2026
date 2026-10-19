@@ -208,6 +208,28 @@ ul,ol{list-style:none}
 .outro .btn:hover{background:var(--kin);color:var(--sumi)}
 .foot{background:var(--sumi);color:rgba(243,238,228,.45);font-size:11px;letter-spacing:.2em;text-align:center;padding:22px 0 26px;border-top:1px solid var(--line-d)}
 
+/* ---------- 改訂追加 ---------- */
+.rank .no{font-size:72px}
+.excl{margin-top:40px;font-size:13px;color:rgba(243,238,228,.62);letter-spacing:.04em}
+.winter.dk{margin-top:72px;padding-top:56px;border-top:1px solid var(--line-d)}
+.winter.dk .winter-head{color:var(--kinari)}
+.winter.dk .winter-head small{color:var(--kin-l)}
+.winter.dk .item h4{color:var(--kinari)}
+.winter.dk .item .price{color:var(--kinari)}
+.winter.dk .item .price small,.winter.dk .item .tg{color:rgba(243,238,228,.62)}
+.winter.dk .item .tg .ng{color:#f0b7a8}
+.noshi-next{grid-column:1 / -1;margin-top:34px;padding:22px 0 0;border-top:1px dashed #d6c8b0}
+.nx-label{font-family:var(--mincho);font-weight:700;font-size:14px;letter-spacing:.14em;color:var(--ink-2)}
+.nx-body{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 18px;margin-top:6px}
+.nx-off{font-weight:600;font-size:52px;line-height:1;color:var(--shu)}
+.nx-off small{font-size:20px;margin-left:4px;letter-spacing:.06em}
+.nx-term{font-weight:600;font-size:22px}
+.nx-term small{font-family:var(--sans);font-size:12px;font-weight:500;color:var(--ink-2);margin:0 4px}
+.item .rt{display:block;font-size:12px;letter-spacing:.16em;color:var(--shu)}
+.noshi .btn{white-space:nowrap;padding:0 12px;letter-spacing:.04em}
+.noshi .btn::after{display:none}
+.price-note{margin-top:36px;font-size:13px;color:var(--ink-2)}
+
 /* ---------- 出現 ---------- */
 .rv{opacity:0;transform:translateY(18px);transition:opacity 1s ease,transform 1s ease}
 .rv.on{opacity:1;transform:none}
@@ -264,7 +286,13 @@ ul,ol{list-style:none}
 
   .rank{grid-template-columns:1fr 1fr;gap:70px;align-items:center;padding:90px 0}
   .rank:nth-of-type(even) .ph{order:2}
-  .rank .no{font-size:130px;margin-bottom:20px}
+  .rank .no{font-size:110px;margin-bottom:20px}
+  .winter.dk{margin-top:100px;padding-top:80px}
+  .nx-off{font-size:72px}
+  .nx-term{font-size:28px}
+  .noshi-next{margin-top:44px}
+  .noshi .btn{padding:0 34px;letter-spacing:.12em}
+  .noshi .btn::after{display:block}
   .rank .no small{font-size:30px}
   .rank .tx{padding-top:0}
   .rank h3{font-size:34px}
@@ -340,7 +368,7 @@ ul,ol{list-style:none}
   <div class="inner">
     <a class="fv-coupon" href="#campaign">
       <span class="off num">10%<small>OFF</small></span>
-      <span class="t">お歳暮 早割クーポン<b><span class="num">12/10</span>(木) 9:59まで</b></span>
+      <span class="t">お歳暮 早割クーポン<b><span class="num">11/26</span>(木) 9:59まで</b></span>
       <span class="btn gold pc">詳しく見る</span>
     </a>
   </div>
@@ -349,13 +377,66 @@ ul,ol{list-style:none}
 <!-- ================= ナビ ================= -->
 <nav class="nav">
   <ul>
-    <li><a href="#campaign">早割</a></li>
     <li><a href="#ranking">人気</a></li>
-    <li><a href="#budget">ご予算</a></li>
-    <li><a href="#room">常温</a></li>
+    <li><a href="#campaign">早割</a></li>
+    <li><a href="#budget">対象商品</a></li>
+    <li><a href="#calendar">ポイント</a></li>
     <li><a href="#service">ギフト</a></li>
   </ul>
 </nav>
+
+<!-- ================= 定番の人気ギフト（早割対象外） ================= -->
+<section class="sec dark" id="ranking">
+  <div class="inner">
+    <div class="head rv">
+      <p class="en">Popular Gifts</p>
+      <h2>まずは、かわすいの<br>定番人気ギフト。</h2>
+      <p class="lead">毎年たくさんの方に選ばれている、<br class="sp">贈りものの定番です。</p>
+    </div>
+
+    <article class="rank rv">
+      <a class="ph" href="https://item.rakuten.co.jp/kawasui/10000130/"><img src="https://shop.r10s.jp/kawasui/cabinet/check/ota-dai80_601.jpg" alt="国産うなぎ蒲焼き3種セット" loading="lazy"></a>
+      <div class="tx">
+        <span class="no">01</span><h3>国産うなぎ蒲焼き<br>3種セット</h3>
+        <p class="c">長焼き・カット・きざみを食べ比べ。ご家族みんなで囲める、昨年いちばん人気のお歳暮です。</p>
+        <p class="meta"><span class="star">評価 4.62</span><span>送料無料</span><span>冷凍便</span><span>のし対応</span></p>
+        <p class="price num">5,990 – 7,715<small>円（税込）</small></p>
+        <a class="btn" href="https://item.rakuten.co.jp/kawasui/10000130/">商品を見る</a>
+      </div>
+    </article>
+
+    <article class="rank rv">
+      <a class="ph" href="https://item.rakuten.co.jp/kawasui/10002324/"><img src="https://shop.r10s.jp/kawasui/cabinet/check/ota2_601.jpg" alt="中身が選べる国産うなぎ2種セット" loading="lazy"></a>
+      <div class="tx">
+        <span class="no">02</span><h3>中身が選べる<br>国産うなぎ2種セット</h3>
+        <p class="c">組み合わせを選べるから、贈るお相手に合わせやすい。5,000円以内で収めたい方にも。</p>
+        <p class="meta"><span class="star">評価 4.73</span><span>送料無料</span><span>冷凍便</span><span>のし対応</span></p>
+        <p class="price num">4,600 – 5,030<small>円（税込）</small></p>
+        <a class="btn" href="https://item.rakuten.co.jp/kawasui/10002324/">商品を見る</a>
+      </div>
+    </article>
+
+    <article class="rank rv">
+      <a class="ph" href="https://item.rakuten.co.jp/kawasui/10002524/"><img src="https://shop.r10s.jp/kawasui/cabinet/check/s-kb2300sn_601.jpg" alt="国産うなぎ2尾入300g" loading="lazy"></a>
+      <div class="tx">
+        <span class="no">03</span><h3>国産うなぎ<br>2尾入 300g</h3>
+        <p class="c">ふっくら焼き上げた蒲焼きを2尾。ご夫婦やお二人暮らしの方への贈りものに。</p>
+        <p class="meta"><span>送料無料</span><span>冷凍便</span></p>
+        <p class="price num">5,560<small>円〜（税込）</small></p>
+        <a class="btn" href="https://item.rakuten.co.jp/kawasui/10002524/">商品を見る</a>
+      </div>
+    </article>
+
+    <div class="winter dk rv">
+      <h3 class="winter-head"><small>Winter Delicacies</small>冬は、こちらも<br>喜ばれます。</h3>
+      <div class="items">
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002492/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/r-set/ms-nzo_601.jpg" alt="3種類から選べる生ズワイガニ" loading="lazy"></div><h4>生ズワイガニ<br>3種から選べる</h4><p class="price num">8,000<small>円</small></p><p class="tg">送料無料・冷凍便・のし対応</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002403/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/ncimag00/ms-kshm-500_601.jpg" alt="紀州串本産 本マグロ 赤身・トロ500g" loading="lazy"></div><h4>紀州串本産 本マグロ<br>赤身・トロ 500g</h4><p class="price num">8,980<small>円</small></p><p class="tg">送料無料・冷凍便・<span class="ng">のし・包装不可</span></p></a>
+      </div>
+    </div>
+    <p class="excl rv">※このエリアの商品は、早割クーポンの対象外です。</p>
+  </div>
+</section>
 
 <!-- ================= 早割クーポン ================= -->
 <section class="sec" id="campaign">
@@ -363,11 +444,12 @@ ul,ol{list-style:none}
     <div class="head rv">
       <p class="en">Early Bird Coupon</p>
       <h2>早めのご用意が、<br>いちばんの心づかい。</h2>
+      <p class="lead">ギフト向け11商品が、<br class="sp">早割クーポンでおトクに。</p>
     </div>
     <div class="noshi rv">
       <!-- 熨斗 -->
       <svg class="noshi-mark" viewBox="0 0 46 96" aria-hidden="true">
-        <path d="M8 0 L38 0 L38 70 L23 96 L8 70 Z" fill="#9e2b22"/>
+        <path d="M8 0 L38 0 L38 70 L23 96 L8 70 Z" fill="#b0241c"/>
         <path d="M14 0 L32 0 L32 62 L23 80 L14 62 Z" fill="#fbf8f2"/>
         <rect x="20" y="6" width="6" height="58" fill="#d8bf8c"/>
       </svg>
@@ -378,18 +460,63 @@ ul,ol{list-style:none}
       <p class="noshi-term">
         <span class="d num">10/28<small>(水) 10:00</small></span>
         <span class="to">から</span>
-        <span class="d num">12/10<small>(木) 9:59</small></span>
+        <span class="d num">11/26<small>(木) 9:59</small></span>
       </p>
-      <p class="noshi-note">【※対象商品・利用条件・先着枚数などをここに記載】</p>
-      <!-- ★要記入：クーポン取得URL -->
-      <a class="btn fill" href="#">クーポンを受け取る</a>
+      <p class="noshi-note">対象：ギフト向け商品（全11商品）</p>
+      <a class="btn fill" href="https://coupon.rakuten.co.jp/getCoupon?getkey=VFBOTy1EVzJKLVVKT1ctT1BNVw--&amp;rt=">10%OFFクーポンを受け取る</a>
+      <div class="noshi-next">
+        <p class="nx-label">その後も、12/10まで</p>
+        <p class="nx-body"><span class="nx-off num">5%<small>OFF</small></span><span class="nx-term num">11/26<small>(木) 10:00</small> – 12/10<small>(木) 9:59</small></span></p>
+        <!-- ★要記入：5%OFFクーポンURLが届いたらボタンを追加 -->
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- ================= 早割対象商品 ================= -->
+<section class="sec paper" id="budget">
+  <div class="inner">
+    <div class="head rv">
+      <p class="en">Coupon Items</p>
+      <h2>早割クーポン<br class="sp">対象の11商品</h2>
+      <p class="lead">ご予算と、贈るお相手との<br class="sp">距離感にあわせて。</p>
+    </div>
+
+    <div class="tier rv">
+      <h3 class="tier-head"><span class="yen"><span class="num">5,000</span>円未満</span><span class="d">気軽に贈れる</span></h3>
+      <div class="items">
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002290/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-k1002ks2_601.jpg" alt="きざみと肝吸いギフト" loading="lazy"></div><h4>きざみと肝吸いギフト</h4><p class="price num">3,990<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002289/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-kb1701ks1sn_601.jpg" alt="長焼きと肝吸いギフト" loading="lazy"></div><h4>長焼きと肝吸いギフト</h4><p class="price num">4,180<small>円〜</small></p><p class="tg">送料無料・冷凍便</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002526/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/imgrc0109082864.jpg" alt="うなぎのおつまみセット" loading="lazy"></div><h4>うなぎの<br>おつまみセット</h4><p class="price num">4,800<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
+      </div>
+    </div>
+
+    <div class="tier rv">
+      <h3 class="tier-head"><span class="yen"><span class="num">5,000 – 6,000</span>円台</span><span class="d">しっかり贅沢に</span></h3>
+      <div class="items">
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10001981/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/check/cut4200km2_601.jpg" alt="カットと肝吸いギフト" loading="lazy"></div><h4>カットと肝吸いギフト</h4><p class="price num">5,990<small>円〜</small></p><p class="tg">送料無料・冷凍便</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002534/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/ncimag00/cut2100snj-3_601.jpg" alt="常温タイプ 蒲焼きカット3人前ギフト" loading="lazy"></div><h4><span class="rt">常温タイプ</span>蒲焼きカット<br>3人前ギフト</h4><p class="price num">5,990<small>円〜</small></p><p class="tg">送料無料・冷凍庫いらず</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10001980/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/kb200ki2_601.jpg" alt="超特大うなぎときざみセット" loading="lazy"></div><h4>超特大うなぎと<br>きざみセット</h4><p class="price num">6,480<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10001990/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-kb1701cut2sn_601.jpg" alt="特大うなぎ長焼きと蒲焼きカット" loading="lazy"></div><h4>特大うなぎ長焼きと<br>蒲焼きカット</h4><p class="price num">6,990<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
+      </div>
+    </div>
+
+    <div class="tier premium rv">
+      <h3 class="tier-head"><span class="yen"><span class="num">7,000</span>円以上</span><span class="d">特別なあの方へ</span></h3>
+      <div class="items">
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10000113/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-kb1702sn_601.jpg" alt="特大うなぎ蒲焼き170g×2本" loading="lazy"></div><h4>特大うなぎ蒲焼き<br>170g×2本</h4><p class="price num">8,210<small>円〜</small></p><p class="tg">送料無料・冷凍便</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10000114/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-kb1703sn_601.jpg" alt="特大うなぎ蒲焼き170g×3本" loading="lazy"></div><h4>特大うなぎ蒲焼き<br>170g×3本</h4><p class="price num">10,910<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002456/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-kb1704sn_601.jpg" alt="特大うなぎ蒲焼き170g×4本" loading="lazy"></div><h4>特大うなぎ蒲焼き<br>170g×4本</h4><p class="price num">14,020<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
+        <a class="item" href="https://item.rakuten.co.jp/kawasui/10000104/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-kb1705sn_601.jpg" alt="特大うなぎ蒲焼き170g×5本" loading="lazy"></div><h4>特大うなぎ蒲焼き<br>170g×5本</h4><p class="price num">16,920<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
+      </div>
+    </div>
+    <p class="price-note">※表示価格はクーポン適用前の価格です。</p>
   </div>
 </section>
 
 <!-- ================= ポイントアップカレンダー ================= -->
 <!-- 期間は入稿済みの広告枠に合わせています。開始・終了時刻と対象商品は要記入 -->
-<section class="sec paper" id="calendar">
+<section class="sec" id="calendar">
   <div class="inner cal-wrap">
     <div class="head rv">
       <p class="en">Point Calendar</p>
@@ -407,124 +534,6 @@ ul,ol{list-style:none}
         <li><div class="date"><span class="num">12/14 – 12/28</span><small>月〜月</small></div><div class="what"><b>ポイント最大10倍</b><span>対象：【商品名】</span></div></li>
       </ul>
       <p class="cal-note">※各期間の開始・終了時刻：【要記入】</p>
-    </div>
-  </div>
-</section>
-
-<!-- ================= ランキング ================= -->
-<section class="sec dark" id="ranking">
-  <div class="inner">
-    <div class="head rv">
-      <p class="en">Ranking</p>
-      <h2>昨年、もっとも<br class="sp">選ばれた三品。</h2>
-      <p class="lead">迷われたら、まずはこちらから。</p>
-    </div>
-
-    <article class="rank rv">
-      <a class="ph" href="https://item.rakuten.co.jp/kawasui/10000130/"><img src="https://shop.r10s.jp/kawasui/cabinet/check/ota-dai80_601.jpg" alt="国産うなぎ蒲焼き3種セット" loading="lazy"></a>
-      <div class="tx">
-        <span class="no"><small>No.</small>1</span><h3>国産うなぎ蒲焼き<br>3種セット</h3>
-        <p class="c">長焼き・カット・きざみを食べ比べ。ご家族みんなで囲める、いちばん人気のお歳暮です。</p>
-        <p class="meta"><span class="star">評価 4.62</span><span>送料無料</span><span>冷凍便</span><span>のし対応</span></p>
-        <p class="price num">5,990 – 7,715<small>円（税込）</small></p>
-        <a class="btn" href="https://item.rakuten.co.jp/kawasui/10000130/">商品を見る</a>
-      </div>
-    </article>
-
-    <article class="rank rv">
-      <a class="ph" href="https://item.rakuten.co.jp/kawasui/10001981/"><img src="https://shop.r10s.jp/kawasui/cabinet/check/cut4200km2_601.jpg" alt="カットと肝吸いギフト" loading="lazy"></a>
-      <div class="tx">
-        <span class="no"><small>No.</small>2</span><h3>カットと肝吸いギフト</h3>
-        <p class="c">食べやすい大きさにカットした蒲焼きを、1枚ずつ真空パック。本格肝吸いも付いた2人前セットです。</p>
-        <p class="meta"><span class="star">評価 4.74</span><span>送料無料</span><span>冷凍便</span><span>のし対応</span></p>
-        <p class="price num">5,990 – 6,095<small>円（税込）</small></p>
-        <a class="btn" href="https://item.rakuten.co.jp/kawasui/10001981/">商品を見る</a>
-      </div>
-    </article>
-
-    <article class="rank rv">
-      <a class="ph" href="https://item.rakuten.co.jp/kawasui/10002324/"><img src="https://shop.r10s.jp/kawasui/cabinet/check/ota2_601.jpg" alt="中身が選べる国産うなぎ2種セット" loading="lazy"></a>
-      <div class="tx">
-        <span class="no"><small>No.</small>3</span><h3>中身が選べる<br>国産うなぎ2種セット</h3>
-        <p class="c">組み合わせを選べるから、贈るお相手に合わせやすい。5,000円以内で収めたい方にも。</p>
-        <p class="meta"><span class="star">評価 4.73</span><span>送料無料</span><span>冷凍便</span><span>のし対応</span></p>
-        <p class="price num">4,600 – 5,030<small>円（税込）</small></p>
-        <a class="btn" href="https://item.rakuten.co.jp/kawasui/10002324/">商品を見る</a>
-      </div>
-    </article>
-  </div>
-</section>
-
-<!-- ================= 予算で選ぶ ================= -->
-<section class="sec" id="budget">
-  <div class="inner">
-    <div class="head rv">
-      <p class="en">By Budget</p>
-      <h2>ご予算で選ぶ</h2>
-      <p class="lead">贈るお相手との距離感にあわせて。</p>
-    </div>
-
-    <div class="tier rv">
-      <h3 class="tier-head"><span class="yen"><span class="num">5,000</span>円未満</span><span class="d">気軽に贈れる</span></h3>
-      <div class="items">
-        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002290/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-k1002ks2_601.jpg" alt="きざみと肝吸いギフト" loading="lazy"></div><h4>きざみと肝吸いギフト</h4><p class="price num">3,990<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
-        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002289/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-kb1701ks1sn_601.jpg" alt="長焼きと肝吸いギフト" loading="lazy"></div><h4>長焼きと肝吸いギフト</h4><p class="price num">4,180<small>円〜</small></p><p class="tg">送料無料・冷凍便</p></a>
-        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002324/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/check/ota2_601.jpg" alt="中身が選べる国産うなぎ2種セット" loading="lazy"></div><h4>中身が選べる2種セット</h4><p class="price num">4,600<small>円〜</small></p><p class="tg">送料無料・冷凍便</p></a>
-        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002526/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/imgrc0109082864.jpg" alt="うなぎのおつまみセット" loading="lazy"></div><h4>うなぎのおつまみセット</h4><p class="price num">4,800<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
-      </div>
-    </div>
-
-    <div class="tier rv">
-      <h3 class="tier-head"><span class="yen"><span class="num">5,000 – 6,000</span>円台</span><span class="d">しっかり贅沢に</span></h3>
-      <div class="items">
-        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002524/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/check/s-kb2300sn_601.jpg" alt="国産うなぎ2尾入300g" loading="lazy"></div><h4>国産うなぎ2尾入 300g</h4><p class="price num">5,560<small>円〜</small></p><p class="tg">送料無料・冷凍便</p></a>
-        <a class="item" href="https://item.rakuten.co.jp/kawasui/10000130/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/check/ota-dai80_601.jpg" alt="国産うなぎ蒲焼き3種セット" loading="lazy"></div><h4>国産うなぎ蒲焼き3種セット</h4><p class="price num">5,990<small>円〜</small></p><p class="tg">送料無料・冷凍便</p></a>
-        <a class="item" href="https://item.rakuten.co.jp/kawasui/10001981/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/check/cut4200km2_601.jpg" alt="カットと肝吸いギフト" loading="lazy"></div><h4>カットと肝吸いギフト</h4><p class="price num">5,990<small>円〜</small></p><p class="tg">送料無料・冷凍便</p></a>
-        <a class="item" href="https://item.rakuten.co.jp/kawasui/10001980/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/kb200ki2_601.jpg" alt="超特大うなぎときざみセット" loading="lazy"></div><h4>超特大うなぎときざみセット</h4><p class="price num">6,480<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
-      </div>
-    </div>
-
-    <div class="tier premium rv">
-      <h3 class="tier-head"><span class="yen"><span class="num">7,000</span>円以上</span><span class="d">特別なあの方へ</span></h3>
-      <div class="items">
-        <a class="item" href="https://item.rakuten.co.jp/kawasui/10000113/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-kb1702sn_601.jpg" alt="特大うなぎ蒲焼き170g×2本" loading="lazy"></div><h4>特大うなぎ蒲焼き<br>170g×2本</h4><p class="price num">8,210<small>円〜</small></p><p class="tg">送料無料・冷凍便</p></a>
-        <a class="item" href="https://item.rakuten.co.jp/kawasui/10000114/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-kb1703sn_601.jpg" alt="特大うなぎ蒲焼き170g×3本" loading="lazy"></div><h4>特大うなぎ蒲焼き<br>170g×3本</h4><p class="price num">10,910<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
-        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002456/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-kb1704sn_601.jpg" alt="特大うなぎ蒲焼き170g×4本" loading="lazy"></div><h4>特大うなぎ蒲焼き<br>170g×4本</h4><p class="price num">14,020<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
-        <a class="item" href="https://item.rakuten.co.jp/kawasui/10000104/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/gifuto/gf-kb1705sn_601.jpg" alt="特大うなぎ蒲焼き170g×5本" loading="lazy"></div><h4>特大うなぎ蒲焼き<br>170g×5本</h4><p class="price num">16,920<small>円</small></p><p class="tg">送料無料・冷凍便</p></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= 常温ギフト＋冬のごちそう ================= -->
-<section class="sec paper" id="room">
-  <div class="inner">
-    <div class="head rv">
-      <p class="en">No Freezer Needed</p>
-      <h2>冷凍庫を気にせず<br>贈れる、常温ギフト。</h2>
-      <p class="lead">受け取る方が困らない、ひとつ上の気づかいを。</p>
-    </div>
-    <a class="room rv" href="https://item.rakuten.co.jp/kawasui/10002534/">
-      <img src="https://shop.r10s.jp/kawasui/cabinet/ncimag00/cut2100snj-3_601.jpg" alt="常温タイプ 蒲焼きカット3人前ギフト" loading="lazy">
-      <div class="tx">
-        <p class="tag">常温タイプ</p>
-        <h3>国産うなぎの蒲焼き<br>カット3人前ギフト</h3>
-        <p class="price num">5,990 – 6,320<small>円（税込）</small></p>
-        <ul>
-          <li>冷凍庫の空きを気にせず贈れる</li>
-          <li>レンジで温めるだけ</li>
-          <li>手渡しの手土産にも</li>
-        </ul>
-        <span class="btn fill">商品を見る</span>
-      </div>
-    </a>
-
-    <div class="winter rv">
-      <h3 class="winter-head"><small>Winter Delicacies</small>冬は、こちらも<br>喜ばれます。</h3>
-      <div class="items">
-        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002492/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/r-set/ms-nzo_601.jpg" alt="3種類から選べる生ズワイガニ" loading="lazy"></div><h4>生ズワイガニ<br>3種から選べる</h4><p class="price num">8,000<small>円</small></p><p class="tg">送料無料・冷凍便・のし対応</p></a>
-        <a class="item" href="https://item.rakuten.co.jp/kawasui/10002403/"><div class="ph"><img src="https://shop.r10s.jp/kawasui/cabinet/ncimag00/ms-kshm-500_601.jpg" alt="紀州串本産 本マグロ 赤身・トロ500g" loading="lazy"></div><h4>紀州串本産 本マグロ<br>赤身・トロ 500g</h4><p class="price num">8,980<small>円</small></p><p class="tg">送料無料・冷凍便・<span class="ng">のし・包装不可</span></p></a>
-      </div>
     </div>
   </div>
 </section>
@@ -551,8 +560,8 @@ ul,ol{list-style:none}
       </div>
       <h3>お歳暮のスケジュール</h3>
       <ol class="steps">
-        <li class="hot"><span class="when">〜12/10 朝</span><span class="what">早割10%OFFでおトクにご注文を。<br>お届け日を指定しておけば安心です。</span></li>
-        <li><span class="when">12月上旬〜</span><span class="what">お歳暮を贈る一般的な時期のはじまり。</span></li>
+        <li class="hot"><span class="when">〜11/26 朝</span><span class="what">早割10%OFFでいちばんおトクに。<br>お届け日を指定しておけば安心です。</span></li>
+        <li><span class="when">〜12/10 朝</span><span class="what">早割5%OFF。お歳暮を贈る<br class="sp">一般的な時期のはじまりです。</span></li>
         <li><span class="when">12/20頃まで</span><span class="what">このあたりまでに届くのが目安です。</span></li>
         <li class="end"><span class="when">年内配送</span><span class="what">年内お届けの最終受付は<br><b class="num">12/28</b>(月) 12:00 まで。</span></li>
       </ol>
